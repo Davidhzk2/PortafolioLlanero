@@ -1,0 +1,102 @@
+// 171087
+
+@mixin media($consulta) {
+
+    $media-xxlg: "(max-width: 4200px)"; // Resolucion 4k
+
+    $media-xlg: "(max-width: 1600px)"; // Resoluciones extragrandes
+
+    $media-lg: "(max-width: 1200px)"; // Resoluciones grandes
+
+    $media-md: "(max-width: 992px)"; // Escritorios
+
+    $media-sm: "(max-width: 768px)"; // Tablets
+
+    $media-xs: "(max-width : 480px)"; // Telefonos
+
+    $media-xxs: "(max-width : 375px)"; // iPhone Retina
+
+    $media-xsm: "(max-width : 320px)"; // mobile small 
+
+    @if $consulta==xxs {
+
+        @media #{$media-xxs} {
+
+            @content;
+
+        }
+
+    }
+
+    @if $consulta==xs {
+
+        @media #{$media-xs} {
+
+            @content;
+
+        }
+
+    }
+
+    @else if $consulta==sm {
+
+        @media #{$media-sm} {
+
+            @content;
+
+        }
+
+    }
+
+    @else if $consulta==md {
+
+        @media #{$media-md} {
+
+            @content;
+
+        }
+
+    }
+
+    @else if $consulta==lg {
+
+        @media #{$media-lg} {
+
+            @content;
+
+        }
+
+    }
+
+    @else if $consulta==xlg {
+
+        @media #{$media-xlg} {
+
+            @content;
+
+        }
+
+    }
+
+    @else if $consulta==xxlg {
+
+        @media #{$media-xxlg} {
+
+            @content;
+
+        }
+
+    }
+
+    @else if $consulta==xsm {
+
+        @media #{$media-xsm} {
+
+            @content;
+
+        }
+
+    }
+
+
+}
