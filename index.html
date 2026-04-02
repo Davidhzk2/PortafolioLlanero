@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portafolio</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- <link rel="stylesheet" href="assets/scss/style.scss" /> -->
     <!-- <link rel="stylesheet" href="/assets/css/doodle.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,9 +13,9 @@
   </head>
   <body class="doodle">
     <header>
-        <div class="log">
+        <div class="logo">
             <a href="">
-                <img src="" alt="Logo">
+                <img src="./assets/images/Logo.png" alt="Logo">
             </a>
         </div>
       <nav>
@@ -36,63 +37,89 @@
     </header>
     <main>
       <section class="section-home">
-        <div class="row">
-          <div class="animation-container">
-            <img src="/assets/images/deafultimg.jpg" alt="image-animation" />
+        <div class="home-banner">
+          <div class="banner-flex">
+            <div class="animation-container">
+              <img class="img" src="/assets/images/Projects.png" alt="image-animation" />
+            </div>
+            <h1 class="banner-title title">
+              COMBINO MIS CONOCIMIENTOS DE INGENIERÍA CON EL <span class="text-purple">DISEÑO DE PRODUCTO</span> PARA CREAR INTERFACES
+            </h1>
           </div>
-          <h1 class="banner-title title">
-            COMBINO MIS CONOCIMIENTOS DE INGENIERÍA CON EL <span class="text-purple">DISEÑO DE PRODUCTO</span> PARA CREAR INTERFACES
-          </h1>
+
         </div>
       </section>
       <section class="section-1">
         <div class="inside-container">
           <div class="text-container">
-            <h2 class="text-container-title title">Business process and technologies</h2>
-            <p>
+            <h2 class="text-section-title title">Business process and technologies</h2>
+            <p class="richtext">
               En resumen soy una persona a la que le gusta trabajar en entornos
               caoticos y complejos, para hacerlos mas claros y humanos
             </p>
             <button class="doodle-btn primary-button">Leer mas</button>
           </div>
           <div class="animation-container">
-            <img src="/assets/images/deafultimg.jpg" alt="image-animation" />
+            <img src="./assets/images/pcportfolio.png" alt="image-animation" />
           </div>
         </div>
       </section>
       <section class="section-1">
         <div class="inside-container">
           <div class="text-container">
-            <h2 class="text-container-title title">Pa parchar</h2>
-            <p>
+            <h2 class="text-section-title title">Pa parchar</h2>
+            <p class="richtext">
               En resumen soy una persona a la que le gusta trabajar en entornos
               caoticos y complejos, para hacerlos mas claros y humanos
             </p>
             <button class="primary-button">Leer mas</button>
           </div>
           <div class="animation-container">
-            <img src="/assets/images/deafultimg.jpg" alt="image-animation" />
+            <img src="./assets/images/phoneProyect.png" alt="image-animation" />
           </div>
         </div>
       </section>
     </main>
     <footer class="section last">
-      <div class="row">
-        <h2 class="text-container-title title text-purple">creemos algo extraordinario</h2>
+      <div class="container">
+        <div class="">
+          <div class="flex-end">
+            <div class="finger-container">
+              <div class="fingerprint-animation"></div>
+              <span class="font-caveat-normal">Dejemos huella.</span>
+            </div>
+
+          </div>
+          <h2 class="text-container-title title title-purple">creemos algo extraordinario</h2>
+        </div>
         <div class="text-container">
-          <p>
+          <p class="richtext">
             En resumen soy una persona a la que le gusta trabajar en entornos
             caoticos y complejos, para hacerlos mas claros y humanos
           </p>
-          <p>
+          <p class="richtext">
             Lo consigo experimentando para aprender, creando historias claras
             que ayuden a las personas a ponerse de acuerdo y diseñando
             sistemas en los que cuida hasta el mas minimo detalle, ya que son
             esos pequeños detalles los que, sin que nos demos cuenta.
             determinan como se percibe algo.
           </p>
-          <a href="">Crisalber97@gmail.com</a>
-          <button>Has clic para empezar</button>
+          <div class="rotate">
+            <a href="" class="email">Crisalber97@gmail.com</a>
+            
+          </div>
+          <span class="font-caveat-normal">Has clic para empezar</span>
+          <ul class="footer-contact">
+            <li class="item-contact">
+              <a href="contact-detail">text</a>
+            </li>
+            <li class="item-contact">
+              <a href="contact-detail">text</a>
+            </li>
+            <li class="item-contact">
+              <a href="contact-detail">text</a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
