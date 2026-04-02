@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
+
+:root{
+    --purple: hsl(257, 74%, 61%);
+    --background: hsl(27, 30%, 93%);
+    --cards:hsl(28, 29%, 90%);
+
+    --text-primary: hsl(23, 55%, 14%);
+    
+}
 *{
     font-family: 'Short Stack', cursive;
     box-sizing: border-box;
@@ -7,7 +16,7 @@
 }
 
 body{
-    background-color: #F7F6EE;
+    background-color: var(--background);
 }
 header{
     max-width: 90%;
@@ -21,7 +30,6 @@ header{
 header a{
     font-family: "Caveat Brush", sans-serif;
     font-weight: 400;
-    font-size: 30px;
     text-decoration: none;
 
 }
@@ -39,7 +47,11 @@ nav ul li {
     height: auto;
     padding: 6px;
     border-radius:45%;
-    border: 2px solid black;
+    border: 2px solid var(--text-primary);
+    font-weight: 400;
+    line-height: 1.6em;
+    letter-spacing: -.02em;
+    font-size: 26px;
 }
 
 .nav-buttons ul li{
@@ -47,8 +59,11 @@ nav ul li {
     height: auto;
     padding: 6px;
     border-radius:45%;
-    background-color: #EF555B;
-    border: 2px solid #EF555B;
+    background-color: var(--purple);
+    border: 2px solid var(--text-primary);
+    font-weight: 400;
+    line-height: 1.6em;
+    letter-spacing: -.02em;
 }
 
 
@@ -60,9 +75,9 @@ nav ul li {
 
 
 nav ul li:hover{
-    border: 2px solid black;
+    border: 2px solid var(--text-primary);
     cursor: pointer;
-    background-color: black;
+    background-color: var(--text-primary);
     transition: 0.2s ease-in-out;
 }
 
@@ -74,7 +89,7 @@ nav ul li:hover > a {
 a {
     text-decoration: none;
     list-style: none;
-    color: black;
+    color: var(--text-primary);
 }
 
 .animation-container{
@@ -95,7 +110,7 @@ section{
 } 
 
 .inside-container{
-    background-color: #F1F0E4;
+    background-color: var(--cards);
     border-radius: 32px;
     padding: 50px;
     display: flex;
@@ -108,6 +123,12 @@ section{
     font-family: "Asap Condensed", sans-serif;
     line-height: 1em;
     text-transform: uppercase;
+    color: var(--text-primary);
+}
+
+.text-purple{
+    color: var(--purple);
+    font-family: inherit;
 
 }
 
@@ -123,11 +144,9 @@ section{
 
 
 .last{
-    background-color: #F1F0E4;
+    background-color: var(--cards);
     height: 100%;
 }
-
-
 
 
 .row{
@@ -138,11 +157,11 @@ section{
 }
 
 .primary-button{
-    background-color: #EF555B;
+    background-color: var(--purple);
     color: white;
     font-size: 18px;
     font-weight: 700;
-    border: none;
+    border: 2px solid var(--text-primary);
     padding: 14px;
     border-radius: 55%;
     cursor: pointer;
