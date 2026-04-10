@@ -1,0 +1,81 @@
+.button__svg--hover {
+
+    &:hover {
+        .buttonStroke--stroke {
+
+            animation: drawLineIn .4s linear forwards;
+        }
+
+        a {
+            color: $redButton;
+        }
+
+        &.button__svg--curriculum {
+
+            a {
+                color: $whiteButton;
+            }
+
+            .buttonStroke--stroke {
+                fill: $redButton;
+            }
+        }
+    }
+
+    &:not(:hover) {
+
+        .buttonStroke--stroke {
+
+            animation: drawLineOut .4s linear forwards;
+        }
+    }
+
+}
+
+.button__svg {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    a {
+        width: max-content;
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+
+        font-family: caveatBrush;
+        font-size: 1.6rem;
+
+        transform: translate(-50%, -50%);
+
+        transition: color .3s ease-in-out;
+    }
+
+    &.active {
+        pointer-events: none;
+
+        a {
+            color: $redButton;
+        }
+
+        .buttonStroke--stroke {
+            stroke-dashoffset: 0;
+            stroke-dasharray: 3200;
+
+        }
+    }
+
+    &.button__svg--arrow{
+        margin-right: 100px;
+        img{
+            width: 80px;
+            position: absolute;
+            right: -50px;
+            top: 10px;
+
+            transform: rotate(-15deg);
+        }
+    }
+}

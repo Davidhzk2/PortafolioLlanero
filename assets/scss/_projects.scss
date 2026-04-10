@@ -1,0 +1,120 @@
+.hero {
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    gap: 2.5rem;
+
+    h1 {
+        font-family: chau;
+        font-size: 4.5rem;
+        line-height: 1.2;
+        font-weight: 100;
+
+        span {
+            color: $fontFocus;
+        }
+    }
+
+    img {
+        width: 500px;
+    }
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    .project {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: $cardBackground;
+
+        padding: 2.5rem 2rem;
+        border-radius: 1.5rem;
+
+        .project__izq {
+            display: flex;
+            flex-direction: column;
+
+            gap: 3rem;
+
+            .project__about {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                h2 {
+                    font-size: 4rem;
+                    font-family: chau;
+                    line-height: 1;
+                }
+
+                p {
+                    max-width: 90%;
+                    font-size: 1.5rem;
+                    line-height: 1.2;
+                }
+            }
+
+            .project__itemsCta {
+
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+
+                .project__list {
+                    display: flex;
+                    align-items: center;
+                }
+
+                .button__svg {
+                    width: max-content;
+                    margin-left: auto;
+                }
+            }
+        }
+
+        .project__der {
+            position: relative;
+
+            img {
+                position: absolute;
+                z-index: 1;
+
+                
+                transform: translate(-50%, -50%);
+
+            }
+
+            .phonePortfolio, .desktopPortfolio {
+                position: relative;
+                z-index: 10;
+            }
+
+
+            &.mobile {
+                img {
+                    top: 50%;
+                    left: 51.3%;
+                    width: 183px;
+                }
+            }
+    
+            &.desktop {
+                img{
+                    top: 39%;
+                    left: 50%;
+                    width: 485px;
+                }
+            }
+
+
+        }
+
+    }
+
+}

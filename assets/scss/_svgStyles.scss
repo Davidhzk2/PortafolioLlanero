@@ -1,0 +1,62 @@
+.buttonStroke{
+    width: 155px;
+}
+
+.buttonStroke--stroke{
+    fill: transparent;
+    stroke:$strokeColor;
+    stroke-width:15;
+    stroke-linecap:round;
+    
+    stroke-dashoffset: 3200;
+    stroke-dasharray: 3200;
+
+    transition: fill .4s cubic-bezier(0.63, 0, 0.34, 1);
+    
+}
+
+@keyframes drawLineIn {
+    0% {
+        stroke-dashoffset: 3200;
+        stroke-dasharray: 3200;
+        animation-timing-function: cubic-bezier(0.63, 0, 0.34, 1);
+    }
+
+    100%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 3200;
+    }
+}
+
+@keyframes drawLineOut {
+    0% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: -3200;
+        animation-timing-function: cubic-bezier(0.63, 0, 0.34, 1);
+    }
+
+    100%{
+        stroke-dashoffset: -3200;
+        stroke-dasharray: -3200;
+    }
+}
+
+.phonePortfolio{
+    width: 508px;
+    .phonePortfolio--stroke{
+        fill: transparent;
+        stroke:$strokeColorRed;
+        stroke-width:4;
+        stroke-linecap:round;
+    }
+}
+
+.desktopPortfolio{
+    width: 508px;
+    .desktopPortfolio--stroke{
+        fill: transparent;
+        stroke:$strokeColorRed;
+        stroke-width:4;
+        stroke-linecap:round;
+    }
+}

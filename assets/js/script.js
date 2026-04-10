@@ -1,13 +1,17 @@
-console.log("Its working!");
+let lastScroll = 0;
+const header = document.querySelector(".header");
 
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
 
+  if (currentScroll <= 150) {
+    // 👇 SOLO aparece en el top
+    header.classList.remove("header--hidden");
+  } else {
+    // 👇 cualquier otro punto → oculto
+    header.classList.add("header--hidden");
+  }
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    const intersecting = entry.isIntersecting
-    entry.target.style.backgroundColor = intersecting ? "blue" : "orange"
-  })
-})
-
-observer.observe(document.getElementById("test"))
+  lastScroll = currentScroll;
+});
 

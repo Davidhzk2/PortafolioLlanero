@@ -1,0 +1,33 @@
+footer {
+    background-color: $footerBg;
+
+    .footer__fingerPrint {
+        width: 55px;
+        height: 60px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        animation: fingerprint 0.5s steps(1) infinite;
+        transform: rotate(-25deg);
+    }
+
+    @keyframes fingerprint {
+
+        0%,
+        100% {
+            background-image: url("../../assets/images/huella_1.png");
+        }
+
+        25% {
+            background-image: url("../../assets/images/huella_2.png");
+        }
+
+        50% {
+            background-image: url("../../assets/images/huella_3.png");
+        }
+
+        75% {
+            background-image: url("../../assets/images/huella_4.png");
+        }
+    }
+}

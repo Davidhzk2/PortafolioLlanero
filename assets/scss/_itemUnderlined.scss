@@ -1,0 +1,18 @@
+.itemUnderlined {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transform: rotate(-5deg);
+
+    span {
+        font-size: 1.7rem;
+        font-family: caveat;
+    }
+
+    img {
+        margin-top: -3px;
+        width: 172px;
+    }
+}
