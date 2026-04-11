@@ -15,3 +15,21 @@ window.addEventListener("scroll", () => {
   lastScroll = currentScroll;
 });
 
+const elements = document.querySelectorAll("#project");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+
+    else {
+      entry.target.classList.remove("visible");
+    }
+  });
+}, {
+  threshold: 0.3 // 👈 se activa cuando el 30% es visible
+});
+
+elements.forEach(el => observer.observe(el));
+

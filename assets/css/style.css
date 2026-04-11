@@ -100,52 +100,44 @@ header .header__container .header__right img {
 @-webkit-keyframes drawLineIn {
   0% {
     stroke-dashoffset: 3200;
-    stroke-dasharray: 3200;
     -webkit-animation-timing-function: cubic-bezier(0.63, 0, 0.34, 1);
             animation-timing-function: cubic-bezier(0.63, 0, 0.34, 1);
   }
   100% {
     stroke-dashoffset: 0;
-    stroke-dasharray: 3200;
   }
 }
 
 @keyframes drawLineIn {
   0% {
     stroke-dashoffset: 3200;
-    stroke-dasharray: 3200;
     -webkit-animation-timing-function: cubic-bezier(0.63, 0, 0.34, 1);
             animation-timing-function: cubic-bezier(0.63, 0, 0.34, 1);
   }
   100% {
     stroke-dashoffset: 0;
-    stroke-dasharray: 3200;
   }
 }
 
 @-webkit-keyframes drawLineOut {
   0% {
     stroke-dashoffset: 0;
-    stroke-dasharray: -3200;
     -webkit-animation-timing-function: cubic-bezier(0.63, 0, 0.34, 1);
             animation-timing-function: cubic-bezier(0.63, 0, 0.34, 1);
   }
   100% {
     stroke-dashoffset: -3200;
-    stroke-dasharray: -3200;
   }
 }
 
 @keyframes drawLineOut {
   0% {
     stroke-dashoffset: 0;
-    stroke-dasharray: -3200;
     -webkit-animation-timing-function: cubic-bezier(0.63, 0, 0.34, 1);
             animation-timing-function: cubic-bezier(0.63, 0, 0.34, 1);
   }
   100% {
     stroke-dashoffset: -3200;
-    stroke-dasharray: -3200;
   }
 }
 
@@ -158,6 +150,46 @@ header .header__container .header__right img {
   stroke: #9E3B43;
   stroke-width: 4;
   stroke-linecap: round;
+  stroke-dashoffset: -6425;
+  stroke-dasharray: 6425;
+  -webkit-animation: drawPhoneOut 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
+          animation: drawPhoneOut 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
+}
+
+@-webkit-keyframes drawPhoneIn {
+  0% {
+    stroke-dashoffset: -6425;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawPhoneIn {
+  0% {
+    stroke-dashoffset: -6425;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes drawPhoneOut {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 6425;
+  }
+}
+
+@keyframes drawPhoneOut {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 6425;
+  }
 }
 
 .desktopPortfolio {
@@ -169,6 +201,46 @@ header .header__container .header__right img {
   stroke: #9E3B43;
   stroke-width: 4;
   stroke-linecap: round;
+  stroke-dashoffset: -8450;
+  stroke-dasharray: 8450;
+  -webkit-animation: drawDesktopOut 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
+          animation: drawDesktopOut 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
+}
+
+@-webkit-keyframes drawDesktopIn {
+  0% {
+    stroke-dashoffset: 8450;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawDesktopIn {
+  0% {
+    stroke-dashoffset: 8450;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes drawDesktopOut {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -8450;
+  }
+}
+
+@keyframes drawDesktopOut {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -8450;
+  }
 }
 
 .button__svg--hover:hover .buttonStroke--stroke {
@@ -267,10 +339,45 @@ header .header__container .header__right img {
 }
 
 footer {
+  margin-top: 10rem;
   background-color: #faf2de;
+  padding: 7rem 2rem;
 }
 
-footer .footer__fingerPrint {
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15rem;
+}
+
+footer .container .footer__izq {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+}
+
+footer .container .footer__izq .footer__print {
+  position: relative;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+}
+
+footer .container .footer__izq .footer__print .footer__fingerPrint {
+  position: absolute;
+  left: 0;
+  top: -4rem;
   width: 55px;
   height: 60px;
   background-size: contain;
@@ -312,6 +419,110 @@ footer .footer__fingerPrint {
   75% {
     background-image: url("../../assets/images/huella_4.png");
   }
+}
+
+footer .container .footer__izq .footer__print span {
+  font-family: caveat;
+  font-size: 1.8rem;
+}
+
+footer .container .footer__izq h2 {
+  font-size: 5rem;
+  line-height: 1;
+  color: #9E3B43;
+}
+
+footer .container .footer__der {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+}
+
+footer .container .footer__der .footer__msg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+footer .container .footer__der .footer__msg p {
+  font-size: 1.6rem;
+}
+
+footer .container .footer__der .footer__cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+footer .container .footer__der .footer__cta .footer__correo {
+  text-align: center;
+}
+
+footer .container .footer__der .footer__cta .footer__correo img {
+  display: block;
+  width: 15rem;
+}
+
+footer .container .footer__der .footer__cta .footer__correo p {
+  line-height: 1;
+  font-family: caveatBrush;
+  font-size: 1.7rem;
+}
+
+footer .container .footer__der .footer__cta .arrowImg {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 90px;
+  height: auto;
+}
+
+footer .container .footer__der .footer__cta span {
+  font-family: caveat;
+  font-size: 1.4rem;
+}
+
+footer .container .footer__der .footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+footer .container .footer__der .footer__social img {
+  width: 50px;
+}
+
+footer .container .footer__der .footer__social .wpp, footer .container .footer__der .footer__social .linkedin, footer .container .footer__der .footer__social .telegram {
+  position: relative;
+}
+
+footer .container .footer__der .footer__social .wpp:hover img:first-child, footer .container .footer__der .footer__social .linkedin:hover img:first-child, footer .container .footer__der .footer__social .telegram:hover img:first-child {
+  opacity: 1;
+}
+
+footer .container .footer__der .footer__social .wpp img:first-child, footer .container .footer__der .footer__social .linkedin img:first-child, footer .container .footer__der .footer__social .telegram img:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transform: translateY(-50%, -50%);
+          transform: translateY(-50%, -50%);
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
 }
 
 .hero {
@@ -364,6 +575,26 @@ footer .footer__fingerPrint {
   background-color: #faf2de;
   padding: 2.5rem 2rem;
   border-radius: 1.5rem;
+}
+
+.projects .project .phonePortfolio--stroke {
+  -webkit-animation: drawPhoneOut 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
+          animation: drawPhoneOut 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
+}
+
+.projects .project .desktopPortfolio--stroke {
+  -webkit-animation: drawDesktopOut 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
+          animation: drawDesktopOut 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
+}
+
+.projects .project.visible .phonePortfolio--stroke {
+  -webkit-animation: drawPhoneIn 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
+          animation: drawPhoneIn 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
+}
+
+.projects .project.visible .desktopPortfolio--stroke {
+  -webkit-animation: drawDesktopIn 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
+          animation: drawDesktopIn 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
 }
 
 .projects .project .project__izq {
@@ -438,7 +669,8 @@ footer .footer__fingerPrint {
           transform: translate(-50%, -50%);
 }
 
-.projects .project .project__der .phonePortfolio, .projects .project .project__der .desktopPortfolio {
+.projects .project .project__der .phonePortfolio,
+.projects .project .project__der .desktopPortfolio {
   position: relative;
   z-index: 10;
 }
@@ -489,6 +721,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: chau;
   font-weight: 100;
   margin: 0;
 }

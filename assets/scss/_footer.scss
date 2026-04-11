@@ -1,33 +1,154 @@
 footer {
+    margin-top: 10rem;
     background-color: $footerBg;
 
-    .footer__fingerPrint {
-        width: 55px;
-        height: 60px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        animation: fingerprint 0.5s steps(1) infinite;
-        transform: rotate(-25deg);
+    padding: 7rem 2rem;
+
+    .container {
+        display: flex;
+        align-items: center;
+        gap: 15rem;
+
+        .footer__izq {
+            display: flex;
+            align-items: end;
+            flex-direction: column;
+
+            gap: 3rem;
+
+            .footer__print {
+                position: relative;
+
+                transform: rotate(-5deg);
+
+                .footer__fingerPrint {
+                    position: absolute;
+
+                    left: 0;
+
+                    top: -4rem;
+
+                    width: 55px;
+                    height: 60px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    animation: fingerprint 0.5s steps(1) infinite;
+                    transform: rotate(-25deg);
+                }
+
+                @keyframes fingerprint {
+
+                    0%,
+                    100% {
+                        background-image: url("../../assets/images/huella_1.png");
+                    }
+
+                    25% {
+                        background-image: url("../../assets/images/huella_2.png");
+                    }
+
+                    50% {
+                        background-image: url("../../assets/images/huella_3.png");
+                    }
+
+                    75% {
+                        background-image: url("../../assets/images/huella_4.png");
+                    }
+                }
+
+                span{
+                    font-family: caveat;
+                    font-size: 1.8rem;
+                }
+            }
+
+            h2 {
+                font-size: 5rem;
+                line-height: 1;
+                color: $fontFocus;
+            }
+        }
+
+        .footer__der{
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            .footer__msg{
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                p{
+                    font-size: 1.6rem;
+                }
+            }
+
+            .footer__cta{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                .footer__correo{
+                    text-align: center;
+                    img{
+                        display: block;
+                        width: 15rem;
+                    }
+
+                    p{
+                        line-height: 1;
+                        font-family: caveatBrush;
+                        font-size: 1.7rem;
+                    }
+                }
+
+                .arrowImg{
+                    object-fit: contain;
+                    width: 90px;
+                    height: auto;
+                }
+
+                span{
+                    font-family: caveat;
+                    font-size: 1.4rem;
+                }
+            }
+
+            .footer__social{
+                display: flex;
+                gap: 1rem;
+
+                img{
+                    width: 50px;
+                }
+
+                .wpp,.linkedin,.telegram{
+                    position: relative;
+
+                    &:hover{
+                        img{
+                            &:first-child{
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    img{
+                        &:first-child{
+                            position: absolute;
+
+                            top: 0;
+                            left: 0;
+
+                            opacity: 0;
+
+                            transform: translateY(-50%, -50%);
+
+                            transition: opacity .2s ease;
+                        }
+                    }
+                }
+            }
+        }
     }
 
-    @keyframes fingerprint {
-
-        0%,
-        100% {
-            background-image: url("../../assets/images/huella_1.png");
-        }
-
-        25% {
-            background-image: url("../../assets/images/huella_2.png");
-        }
-
-        50% {
-            background-image: url("../../assets/images/huella_3.png");
-        }
-
-        75% {
-            background-image: url("../../assets/images/huella_4.png");
-        }
-    }
 }

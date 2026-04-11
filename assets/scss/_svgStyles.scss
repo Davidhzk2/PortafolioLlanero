@@ -18,26 +18,22 @@
 @keyframes drawLineIn {
     0% {
         stroke-dashoffset: 3200;
-        stroke-dasharray: 3200;
         animation-timing-function: cubic-bezier(0.63, 0, 0.34, 1);
     }
 
     100%{
         stroke-dashoffset: 0;
-        stroke-dasharray: 3200;
     }
 }
 
 @keyframes drawLineOut {
     0% {
         stroke-dashoffset: 0;
-        stroke-dasharray: -3200;
         animation-timing-function: cubic-bezier(0.63, 0, 0.34, 1);
     }
 
     100%{
         stroke-dashoffset: -3200;
-        stroke-dasharray: -3200;
     }
 }
 
@@ -48,6 +44,31 @@
         stroke:$strokeColorRed;
         stroke-width:4;
         stroke-linecap:round;
+
+        stroke-dashoffset: -6425;
+        stroke-dasharray: 6425;
+
+        animation: drawPhoneOut 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
+    }
+}
+
+@keyframes drawPhoneIn{
+    0%{
+        stroke-dashoffset: -6425;
+    }
+
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes drawPhoneOut{
+    0%{
+        stroke-dashoffset: 0;
+    }
+
+    100%{
+        stroke-dashoffset: 6425;
     }
 }
 
@@ -58,5 +79,30 @@
         stroke:$strokeColorRed;
         stroke-width:4;
         stroke-linecap:round;
+    
+        stroke-dashoffset: -8450;
+        stroke-dasharray: 8450;
+
+        animation: drawDesktopOut 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
+    }
+}
+
+@keyframes drawDesktopIn{
+    0%{
+        stroke-dashoffset: 8450;
+    }
+
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes drawDesktopOut{
+    0%{
+        stroke-dashoffset: 0;
+    }
+
+    100%{
+        stroke-dashoffset: -8450;
     }
 }

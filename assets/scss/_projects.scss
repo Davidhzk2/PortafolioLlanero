@@ -36,6 +36,24 @@
         padding: 2.5rem 2rem;
         border-radius: 1.5rem;
 
+        .phonePortfolio--stroke {
+            animation: drawPhoneOut 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
+        }
+
+        .desktopPortfolio--stroke {
+            animation: drawDesktopOut 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
+        }
+
+        &.visible {
+            .phonePortfolio--stroke {
+                animation: drawPhoneIn 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
+            }
+
+            .desktopPortfolio--stroke {
+                animation: drawDesktopIn 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
+            }
+        }
+
         .project__izq {
             display: flex;
             flex-direction: column;
@@ -85,12 +103,13 @@
                 position: absolute;
                 z-index: 1;
 
-                
+
                 transform: translate(-50%, -50%);
 
             }
 
-            .phonePortfolio, .desktopPortfolio {
+            .phonePortfolio,
+            .desktopPortfolio {
                 position: relative;
                 z-index: 10;
             }
@@ -103,9 +122,9 @@
                     width: 183px;
                 }
             }
-    
+
             &.desktop {
-                img{
+                img {
                     top: 39%;
                     left: 50%;
                     width: 485px;
