@@ -1,214 +1,584 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proyect</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <!-- <link rel="stylesheet" href="assets/scss/style.scss" /> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Caveat+Brush&family=Short+Stack&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <style>
-      .typing-container {
-        font-family: "Asap Condensed", sans-serif;
-        font-weight: 700;
-        font-size: 50px;
-      }
 
-      #typing-text {
-        color: var(--text-primary);
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyect</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- <link rel="stylesheet" href="assets/scss/style.scss" /> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Caveat+Brush&family=Short+Stack&display=swap"
+    rel="stylesheet" />
+</head>
 
-      .cursor {
-        display: inline-block;
-        width: 1px;
-        background-color: var(--text-primary);
-        margin-left: 5px;
-        animation: blink 0.7s infinite;
-      }
+<body>
 
-      @keyframes blink {
-        0%,
-        100% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0;
-        }
-      }
-    </style>
-    <header>
-      <div class="logo">
-        <a href="">
-          <img src="./assets/images/Logo.png" alt="Logo" />
-        </a>
-      </div>
+  <header class="header">
+    <div class="header__container">
+
+      <img src="./assets/images/Logo.png" alt="Logo">
+
       <nav>
         <ul>
-          <li><a href="http://">Proyectos</a></li>
-          <li><a href="http://">Sobre Mi </a></li>
-          <li><a href="http://">Contactame</a></li>
+
+          <li class="button__svg">
+            <svg class="buttonStroke" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1311.1 505.9"
+              style="enable-background:new 0 0 1311.1 505.9;" xml:space="preserve">
+              <path class="buttonStroke--stroke" d="M776.4,10.1C590,7.7,403.3,37.3,226.9,97.2c-79.7,27.1-163.6,65.9-201.4,141.2c-10.7,21.4-17.2,45.4-15,69.2
+                  c4,43.5,35.8,79.6,71.2,105.2c57.4,41.3,126.9,63,196.9,73.1c70,10.1,141,9.3,211.7,9.5c209.1,0.6,424.4,9.3,620.2-64
+                  c49.2-18.4,97.4-42.5,134.3-79.8s61.3-89.7,55.4-141.8c-6.4-57-48.1-105.5-98.3-133.2c-50.2-27.7-108.3-37.3-165.5-42.5
+                  c-140.3-12.7-283.1-0.7-418.6,37.8" />
+            </svg>
+            <a href="http://">Proyectos</a>
+          </li>
+
+          <li class="button__svg active">
+            <svg class="buttonStroke" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1311.1 505.9"
+              style="enable-background:new 0 0 1311.1 505.9;" xml:space="preserve">
+              <path class="buttonStroke--stroke" d="M776.4,10.1C590,7.7,403.3,37.3,226.9,97.2c-79.7,27.1-163.6,65.9-201.4,141.2c-10.7,21.4-17.2,45.4-15,69.2
+                  c4,43.5,35.8,79.6,71.2,105.2c57.4,41.3,126.9,63,196.9,73.1c70,10.1,141,9.3,211.7,9.5c209.1,0.6,424.4,9.3,620.2-64
+                  c49.2-18.4,97.4-42.5,134.3-79.8s61.3-89.7,55.4-141.8c-6.4-57-48.1-105.5-98.3-133.2c-50.2-27.7-108.3-37.3-165.5-42.5
+                  c-140.3-12.7-283.1-0.7-418.6,37.8" />
+            </svg>
+            <a href="http://">Sobre mí</a>
+          </li>
+
+          <li class="button__svg">
+            <svg class="buttonStroke" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1311.1 505.9"
+              style="enable-background:new 0 0 1311.1 505.9;" xml:space="preserve">
+              <path class="buttonStroke--stroke" d="M776.4,10.1C590,7.7,403.3,37.3,226.9,97.2c-79.7,27.1-163.6,65.9-201.4,141.2c-10.7,21.4-17.2,45.4-15,69.2
+                  c4,43.5,35.8,79.6,71.2,105.2c57.4,41.3,126.9,63,196.9,73.1c70,10.1,141,9.3,211.7,9.5c209.1,0.6,424.4,9.3,620.2-64
+                  c49.2-18.4,97.4-42.5,134.3-79.8s61.3-89.7,55.4-141.8c-6.4-57-48.1-105.5-98.3-133.2c-50.2-27.7-108.3-37.3-165.5-42.5
+                  c-140.3-12.7-283.1-0.7-418.6,37.8" />
+            </svg>
+            <a href="http://">Contáctame</a>
+          </li>
         </ul>
       </nav>
-      <div>
+
+      <div class="header__right">
         <nav class="nav-buttons">
           <ul>
-            <li>
-              <a href="">Curriculum</a>
+            <li class="button__svg button__svg--curriculum">
+              <svg class="buttonStroke" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1311.1 505.9"
+                style="enable-background:new 0 0 1311.1 505.9;" xml:space="preserve">
+                <path class="buttonStroke--stroke" d="M776.4,10.1C590,7.7,403.3,37.3,226.9,97.2c-79.7,27.1-163.6,65.9-201.4,141.2c-10.7,21.4-17.2,45.4-15,69.2
+                        c4,43.5,35.8,79.6,71.2,105.2c57.4,41.3,126.9,63,196.9,73.1c70,10.1,141,9.3,211.7,9.5c209.1,0.6,424.4,9.3,620.2-64
+                        c49.2-18.4,97.4-42.5,134.3-79.8s61.3-89.7,55.4-141.8c-6.4-57-48.1-105.5-98.3-133.2c-50.2-27.7-108.3-37.3-165.5-42.5
+                        c-140.3-12.7-283.1-0.7-418.6,37.8" />
+              </svg>
+              <a href="http://">Curriculum</a>
             </li>
           </ul>
         </nav>
-      </div>
-    </header>
-    <main>
-      <section class="section-home">
-        <div class="home-banner">
-          <div class="banner-flex">
-            <div class="animation-container">
-              <img
-                class="img"
-                src="./assets/images/About.png"
-                alt="image-animation"
-              />
-            </div>
-            <!-- <h1 class="banner-title title">
-              COMBINO MIS CONOCIMIENTOS DE INGENIERÍA CON EL <span class="text-purple">DISEÑO DE PRODUCTO</span> PARA CREAR INTERFACES
-            </h1> -->
-            <div class="d">
-              <div class="typing-container">
-                <span id="typing-text" class="banner-title title"></span>
-                <span class="cursor banner-title title">|</span>
-              </div>
-              <p>
-                Soy Ingeniero Multimedia multi-disciplinario con 5 años de
-                experiencia en el diseño Ux / Ui y el desarrollo creativo, con una
-                sólida base técnica y un fino sentido del equilibrio visual.
-              </p>
-  
-              <p>
-                Me apasiona crear experiencias claras, útiles y escalables,
-                especialmente en entornos complejos y de alto riesgo, donde las
-                decisiones de diseño influyen directamente en la confianza, la
-                usabilidad y los resultados empresariales.
-              </p>
 
+        <svg class="lightDark" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000"
+          style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+
+          <path class="lightDark--stroke" d="M181.6,916.9C83,887.9,32.1,777.7,75.4,684.5c17.7-38,49-67.4,103.4-68.1c71.5-0.9,109-33.5,114.7-56.9
+	c5.8-23.8-41.9-41.9-94.5-59.7c-52.6-17.9-132.8-11.2-132.8,3.1s104.2,40.3,177.7,23C317.4,508.5,345,410,331.7,337.5
+	s-81.2-131.2-120.5-115.4s175.1,128.2,239.5,99.6c64.3-28.6,90.4-143,74.6-192c-15.8-49-40.9-36.8-34.2,30.6
+	c6.6,67.4,33.2,164.9,116.4,201.7s184.9-38.3,204.8-82.7c19.9-44.4-29.1-39.3-75.6,12.3s-68.4,134.8-41.4,204.8s138.9,71.5,194,44.4
+	s60.8-43.4-16.3-33.7c-77.1,9.7-171.1,35.7-206.3,164.4c-20.4,71.5,62.8,134.8,113.4,137.4c50.6,2.6,46-10.2-21.4-48.5
+	S603.9,703,533.4,745.9s-72.5,120-52.6,144s37.3,4.1,29.1-38.8S475.2,717.3,404.7,704c-70.5-13.3-193.5,52.1-196.6,102.1
+	s66.4,7.7,83.2-53.1c16.9-60.8,37.3-100.6,37.3-184.9s30.7-199.7,174.2-205.8S672.3,516,657.5,566.6s-75.3,148.6-203.1,98.2
+	c-101.3-40-118.4-195-16.3-238.4S598.2,441,609,483.1s107.5,28.2,173.1,3.1c106-40.5,153.8-103.4,170.4-169.3
+	c35.7-141.9-74.6-278.8-220.9-276.6L254,47.2c-111.6,1.6-205.1,85.2-219,196C15.3,400.6,6.5,593.3,86.2,569.5
+	c0,0,248.4-29,271.8-208.5c23.4-179.6,55.5-185.2,29.3-202.9c-26.2-17.8-130,62.7-170.2,142.1s-103.8,232.9,11.2,401.2
+	S615.5,898.7,781,738.8c56.1-57,82.3-116,65.5-134.7s-9.4,43-202.9,27.1c-193.6-15.9-285.9-231.9-252.2-260s70.8-0.9,139.1,29.9
+	s120.2,52.4,151,15s17.2-53,61.2-46.9s75.4,18.8,57.1,28.2c-18.2,9.4-61.3,16.8-77.2,72.5c-7,21.5-18.2,30.9-25.2,10.3
+	s-23.4-62.2-56.1-72S590.7,390,623.4,375s55.2-34.1,65-60.8c9.8-26.7,22.9-32.3,34.6-1.4c6.4,17,46.4,18.7,100.8,16.7
+	c88.1-3.2,160.8,68.8,158.1,157c-1.5,48.5-5.7,106.4-15,171.4c-19.3,135.5-120.5,234.5-184.6,284.7c-31.3,24.6-70.4,37.3-110.2,35.9
+	C566.5,975,335.9,962.2,181.6,916.9z" />
+
+        </svg>
+
+      </div>
+    </div>
+  </header>
+  <main>
+
+    <div class="container containerAbout">
+
+      <div class="animationScroll">
+        <img class="img" src="./assets/images/About.png" alt="image-animation" />
+      </div>
+
+      <div class="sections">
+        <section class="section about">
+          <div class="about__typing">
+            <h2 id="typing-text" class="banner-title"></h2>
+            <h2 class="cursor banner-title">|</h2>
+          </div>
+
+          <div class="about__paragraph">
+            <p>
+              Soy Ingeniero Multimedia multi-disciplinario con 5 años de
+              experiencia en el diseño Ux / Ui y el desarrollo creativo, con una
+              sólida base técnica y un fino sentido del equilibrio visual.
+            </p>
+
+            <p>
+              Me apasiona crear experiencias claras, útiles y escalables,
+              especialmente en entornos complejos y de alto riesgo, donde las
+              decisiones de diseño influyen directamente en la confianza, la
+              usabilidad y los resultados empresariales.
+            </p>
+          </div>
+        </section>
+
+        <section class="section methods">
+          <div class="section__msg">
+            <p>Así uso mis tecnologías y</p>
+            <p>conocimiento en mi flujo de trabajo ;)</p>
+          </div>
+
+          <div class="section__container">
+            <div class="methods__method strategy">
+              <div class="methods__info">
+                <div class="section__title">
+                  <h3>ESTRATEGIA</h3>
+                  <div class="section__msg">
+                    <p>¡El resultado</p>
+                    <p>es claridad!</p>
+
+                  </div>
+                </div>
+                <p>Antes de diseñar cualquier cosa, me aseguro de que estoy resolviendo el problema adecuado. Esta fase
+                  puede incluir; descubrimiento del producto y del negocio, análisis del mercado y de la competencia,
+                  comprensión de los usuarios y mapeo de los puntos débiles, definición de objetivos, limitaciones y
+                  métricas de éxito.</p>
+              </div>
+
+              <ul class="methods__elements">
+                <li class="itemUnderlined">
+                  <span>Research First</span>
+                  <img src="./assets/images/Subrayado.png" alt="">
+                </li>
+                <li class="itemUnderlined">
+                  <span>Design Thinking</span>
+                  <img src="./assets/images/Subrayado.png" alt="">
+                </li>
+                <li class="itemUnderlined">
+                  <span>User Stories</span>
+                  <img src="./assets/images/Subrayado.png" alt="">
+                </li>
+                <li class="itemUnderlined">
+                  <span>User Personas</span>
+                  <img src="./assets/images/Subrayado.png" alt="">
+                </li>
+                <li class="itemUnderlined">
+                  <span>Wireframing</span>
+                  <img src="./assets/images/Subrayado.png" alt="">
+                </li>
+              </ul>
+            </div>
+
+            <div class="methods__method design">
+              <div class="methods__info">
+                <div class="section__title">
+                  <h3>DISEÑO</h3>
+                  <div class="section__msg">
+                    <p>Las decisiones de diseño siempre</p>
+                    <p>están vinculadas a las necesidades</p>
+                    <p>de los usuario y objetivos empresariales.</p>
+                  </div>
+                </div>
+                <p>Una vez que la dirección está clara, paso a la resolución de problemas a través del diseño. Esto
+                  incluye: flujos de usuarios y arquitectura de la información, wireframes, diseño de interacción,
+                  interfaz de usuario de alta fidelidad y precisión de píxeles, prototipos que simulan el comportamiento
+                  real del producto.</p>
+              </div>
+
+              <ul class="methods__elements icons">
+                <li class="methods__elementsIcons">
+                  <img src="./assets/images/Rive.png" alt="">
+                  <span>Rive</span>
+                </li>
+                <li class="methods__elementsIcons">
+                  <img src="./assets/images/Framer.png" alt="">
+                  <span>Framer</span>
+                </li>
+                <li class="methods__elementsIcons">
+                  <img src="./assets/images/Figma.png" alt="">
+                  <span>Figma</span>
+                </li>
+                <li class="methods__elementsIcons">
+                  <img src="./assets/images/Ai.png" alt="">
+                  <span>Adobe Illustrator</span>
+                </li>
+                <li class="methods__elementsIcons">
+                  <img src="./assets/images/Ps.png" alt="">
+                  <span>Adobe Photoshop</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="methods__method develop">
+              <div class="methods__info">
+                <div class="section__title">
+                  <h3>DESARROLLO</h3>
+                  <div class="section__msg">
+                    <p>Como entiendo el código,</p>
+                    <p>la colaboración es fluida</p>
+                    <p>y práctica.</p>
+
+                  </div>
+                </div>
+                <p>Trabajo en estrecha colaboración con los equipos de ingeniería para garantizar que los diseños se
+                  construyan exactamente según lo previsto. Entregas y documentación claras, control de calidad del
+                  diseño durante el desarrollo y soporte front-end para proyectos web cuando es necesario.</p>
+              </div>
+
+              <ul class="methods__elements icons">
+                <li class="methods__elementsIcons">
+                  <img src="./assets/images/Html.png" alt="">
+                  <span>HTML 5</span>
+                </li>
+                <li class="methods__elementsIcons">
+                  <img src="./assets/images/css.png" alt="">
+                  <span>CSS3</span>
+                </li>
+                <li class="methods__elementsIcons">
+                  <img src="./assets/images/Js.png" alt="">
+                  <span>Javascript</span>
+                </li>
+                <li class="methods__elementsIcons">
+                  <img src="./assets/images/React.png" alt="">
+                  <span>React</span>
+                </li>
+                <li class="methods__elementsIcons">
+                  <img src="./assets/images/Angular.png" alt="">
+                  <span>Angular</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="methods__method quality">
+              <div class="methods__info">
+                <div class="section__title">
+                  <h3>GARANTÍA CALIDAD</h3>
+                  <div class="section__msg">
+                    <p>El objetivo es la confianza,</p>
+                    <p>tanto para usted como</p>
+                    <p>para sus usuarios.</p>
+
+                  </div>
+                </div>
+                <p>El diseño no termina con la entrega. Revisiones periódicas y progreso transparente, iteraciones
+                  basadas en comentarios, pruebas opcionales con clientes reales y perfeccionamiento basado en datos y
+                  conocimientos.</p>
+              </div>
+
+              <ul class="methods__elements icons">
+                <li class="methods__elementsIcons">
+                  <img src="./assets/images/Comment.png" alt="">
+                  <span>Comentarios</span>
+                </li>
+                <li class="methods__elementsIcons">
+                  <img src="./assets/images/Check.png" alt="">
+                  <span>Pruebas</span>
+                </li>
+                <li class="methods__elementsIcons">
+                  <img src="./assets/images/Eye.png" alt="">
+                  <span>Revisión</span>
+                </li>
+                <li class="methods__elementsIcons">
+                  <img src="./assets/images/Data.png" alt="">
+                  <span>Progreso</span>
+                </li>
+                <li class="methods__elementsIcons">
+                  <img src="./assets/images/DataClient.png" alt="">
+                  <span>Clientes - Datos</span>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
-    <footer class="section last">
-      <div class="container">
-        <div class="">
-          <div class="flex-end">
-            <div class="finger-container">
-              <div class="fingerprint-animation"></div>
-              <span class="text-caveat-normal">Dejemos huella.</span>
+
+        </section>
+
+
+        <section class="section jobs">
+          <div class="section__msg">
+            <p>En estas empresas</p>
+            <p>he aplicado todo mi conocimiento *.*</p>
+          </div>
+
+          <div class="section__container">
+
+            <div class="section__exp">
+              <div class="section__title">
+                <h3>DISEÑADOR UI</h3>
+                <p>BPT (Business Process and Technologies)</p>
+                <div class="section__msg">
+                  <p>2022 - Presente</p>
+                </div>
+              </div>
+
+              <div class="section__itemList">
+                <div class="section__item">
+                  <img src="./assets/images/list.png" id="listImg" alt="item 1">
+                  <p>Diseñé y apoyé la maquetación UI de un aplicativo para usuarios de transporte masivo en Medellín,
+                    optimizando la experiencia de acceso mediante microanimaciones y mensajes visuales.</p>
+                </div>
+
+                <div class="section__item">
+                  <img src="./assets/images/list.png" id="listImg" alt="item 2">
+                  <p>Participé en investigación con usuarios y análisis de información, proponiendo soluciones mediante
+                    wireframes para distintos proyectos.</p>
+                </div>
+
+                <div class="section__item">
+                  <img src="./assets/images/list.png" id="listImg" alt="item 3">
+                  <p>Desarrollé el diseño UI de la intranet de una aerolínea internacional, creando prototipos y
+                    participando en su maquetación con HTML, CSS y JavaScript.</p>
+                </div>
+
+                <div class="section__item">
+                  <img src="./assets/images/list.png" id="listImg" alt="item 4">
+                  <p>Diseñé el sitio web corporativo de BPT en WordPress, adaptando el template para facilitar la
+                    gestión y actualización del contenido.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section__exp">
+              <div class="section__title">
+                <h3>DISEÑADOR WEB</h3>
+                <p>La imprenta</p>
+                <div class="section__msg">
+                  <p>2018 - 2020</p>
+                </div>
+              </div>
+
+              <div class="section__itemList">
+                <div class="section__item">
+                  <img src="./assets/images/list.png" id="listImg" alt="item 1">
+                  <p>Diseñé diversos sitios web para clientes frecuentes de la litografía utilizando WordPress y
+                    Elementor como herramientas de gestión y construcción.</p>
+                </div>
+
+                <div class="section__item">
+                  <img src="./assets/images/list.png" id="listImg" alt="item 2">
+                  <p>Desarrollé wireframes y prototipos de alta fidelidad, integrando la retroalimentación constante de
+                    los usuarios para mejorar la experiencia de uso.</p>
+                </div>
+              </div>
             </div>
           </div>
-          <h2 class="text-container-title title title-purple">
-            creemos algo extraordinario juntos.
-          </h2>
+        </section>
+
+        <section class="section studies">
+          <div class="section__msg">
+            <p>No solo aprendo</p>
+            <p>en cursos de youtube :D</p>
+          </div>
+
+          <div class="section__container">
+
+            <div class="section__exp">
+              <div class="section__title">
+                <h3>DISEÑO E INTEGRACIÓN DE MULTIMEDIA</h3>
+                <p>Colegio Juan B. Caballero Medina.</p>
+                <div class="section__msg">
+                  <p>Técnico</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section__exp">
+              <div class="section__title">
+                <h3>PRODUCCIÓN MULTIMEDIA</h3>
+                <p>Servicio Nacional de Aprendizaje (SENA)</p>
+                <div class="section__msg">
+                  <p>Tecnólogo</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section__exp">
+              <div class="section__title">
+                <h3>INGENIERÍA MULTIMEDIA</h3>
+                <p>Universidad Nacional Abierta y a Distancia. (UNAD)</p>
+                <div class="section__msg">
+                  <p>Profesional</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section__exp">
+              <div class="section__title">
+                <h3>CERTIFICADOS</h3>
+                <p>Platzi</p>
+                <div class="section__msg">
+                  <p>Siempre busco</p>
+                  <p>mantenerme informado</p>
+                </div>
+              </div>
+
+              <div class="section__itemList">
+                <div class="section__item">
+                  <img src="./assets/images/list.png" id="listImg" alt="item 1">
+                  <p>Fundamentos de Programación.</p>
+                </div>
+
+                <div class="section__item">
+                  <img src="./assets/images/list.png" id="listImg" alt="item 2">
+                  <p>Diseño de experiencia Ux.</p>
+                </div>
+
+                <div class="section__item">
+                  <img src="./assets/images/list.png" id="listImg" alt="item 3">
+                  <p>Ux / Ui Designer.</p>
+                </div>
+
+                <div class="section__item">
+                  <img src="./assets/images/list.png" id="listImg" alt="item 4">
+                  <p>Javascript para frontend.</p>
+                </div>
+
+                <div class="section__item">
+                  <img src="./assets/images/list.png" id="listImg" alt="item 5">
+                  <p>Fundamentos de Javascript.</p>
+                </div>
+
+                <div class="section__item">
+                  <img src="./assets/images/list.png" id="listImg" alt="item 6">
+                  <p>Ux para developers.</p>
+                </div>
+
+                <div class="section__item">
+                  <img src="./assets/images/list.png" id="listImg" alt="item 7">
+                  <p>Html y Css a profundidad.</p>
+                </div>
+
+                <div class="section__item">
+                  <img src="./assets/images/list.png" id="listImg" alt="item 8">
+                  <p>Figma para diseño de interfaces.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+
+      <div class="footer__izq">
+        <div class="footer__print">
+          <div class="footer__fingerPrint"></div>
+          <span>Dejemos huella.</span>
         </div>
-        <div class="text-container">
-          <p class="richtext">
+
+        <h2>CREEMOS ALGO EXTRAORDINARIO JUNTOS</h2>
+      </div>
+
+      <div class="footer__der">
+        <div class="footer__msg">
+          <p>
             En resumen soy una persona a la que le gusta trabajar en entornos
             caoticos y complejos, para hacerlos mas claros y humanos
           </p>
-          <p class="richtext">
+          <p>
             Lo consigo experimentando para aprender, creando historias claras
-            que ayuden a las personas a ponerse de acuerdo y diseñando sistemas
-            en los que cuida hasta el mas minimo detalle, ya que son esos
-            pequeños detalles los que, sin que nos demos cuenta. determinan como
-            se percibe algo.
+            que ayuden a las personas a ponerse de acuerdo y diseñando
+            sistemas en los que cuida hasta el mas minimo detalle, ya que son
+            esos pequeños detalles los que, sin que nos demos cuenta.
+            determinan como se percibe algo.
           </p>
-          <div class="d">
-            <div class="underline rotate">
-              <a href="" class="email">Crisalber97@gmail.com</a>
-            </div>
+        </div>
 
-            <img class="arrow" src="./assets/images/flecha.png" alt="" />
-            <span class="text-caveat-normal">Has clic para empezar</span>
+        <div class="footer__cta">
+          <div class="footer__correo">
+            <p>Crisalbe97@gmail.com</p>
+            <img src="./assets/images/Subrayado.png" alt="">
           </div>
-          <ul class="footer-contact">
-            <li class="item-contact">
-              <a href="contact-detail whatsapp-link">
-                <img
-                  src="./assets/images/LogoWpp.png"
-                  alt="Logo red social"
-                  class="logo-normal"
-                />
-                <img
-                  src="./assets/images/LogoWppFill.png"
-                  alt="Logo red social"
-                  class="logo-hover"
-                />
-              </a>
-            </li>
-            <li class="item-contact">
-              <a href="contact-detail linkedin">
-                <img src="./assets/images/LogoIn.png" alt="Logo red social" />
-              </a>
-            </li>
-            <li class="item-contact">
-              <a href="contact-detail telegram">
-                <img
-                  src="./assets/images/LogoTelegram.png"
-                  alt="Logo red social"
-                />
-              </a>
-            </li>
-          </ul>
+          <img src="./assets/images/flecha.png" alt="" class="arrowImg">
+          <span>Haz clic para copiar</span>
+        </div>
+
+        <div class="footer__social">
+          <a href="" class="wpp">
+            <img src="./assets/images/LogoWppFill.png" alt="">
+            <img src="./assets/images/LogoWpp.png" alt="">
+          </a>
+
+          <a href="" class="linkedin">
+            <img src="./assets/images/LogoInFill.png" alt="">
+            <img src="./assets/images/LogoIn.png" alt="">
+          </a>
+
+          <a href="" class="telegram">
+            <img src="./assets/images/LogoTelegramFill.png" alt="">
+            <img src="./assets/images/LogoTelegram.png" alt="">
+          </a>
         </div>
       </div>
-    </footer>
+  </footer>
 
-    <script>
-      const textElement = document.getElementById("typing-text");
-      const words = [
-        "Diseñador de producto",
-        "Diseñador UI/UX",
-        "Animador 2D",
-        "Maquetador HTML & CSS",
-        "Ingeniero Multimedia",
-      ];
-      let wordIndex = 0;
-      let charIndex = 0;
-      let isDeleting = false;
-      let typeSpeed = 150;
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/animationButtonStroke.js"></script>
 
-      function type() {
-        const currentWord = words[wordIndex];
+  <script>
+    const textElement = document.getElementById("typing-text");
+    const words = [
+      "DISEÑADOR DE PRODUCTO",
+      "DISEÑADOR UI/UX",
+      "ANIMADOR 2D",
+      "MAQUETADOR HTML / CSS",
+      "INGENIERO MULTIMEDIA",
+    ];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typeSpeed = 150;
 
-        if (isDeleting) {
-          textElement.textContent = currentWord.substring(0, charIndex - 1);
-          charIndex--;
-          typeSpeed = 100; 
-        } else {
-          textElement.textContent = currentWord.substring(0, charIndex + 1);
-          charIndex++;
-          typeSpeed = 200;
-        }
+    function type() {
+      const currentWord = words[wordIndex];
 
-        if (!isDeleting && charIndex === currentWord.length) {
-          isDeleting = true;
-          typeSpeed = 2000;
-        } else if (isDeleting && charIndex === 0) {
-          isDeleting = false;
-          wordIndex = (wordIndex + 1) % words.length;
-          typeSpeed = 500;
-        }
-
-        setTimeout(type, typeSpeed);
+      if (isDeleting) {
+        textElement.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+        typeSpeed = 70;
+      } else {
+        textElement.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+        typeSpeed = 70;
       }
 
-      document.addEventListener("DOMContentLoaded", type);
-    </script>
-  </body>
+      if (!isDeleting && charIndex === currentWord.length) {
+        isDeleting = true;
+        typeSpeed = 1000;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        typeSpeed = 500;
+      }
+
+      setTimeout(type, typeSpeed);
+    }
+
+    document.addEventListener("DOMContentLoaded", type);
+  </script>
+</body>
+
 </html>

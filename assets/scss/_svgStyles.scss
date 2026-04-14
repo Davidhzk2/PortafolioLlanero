@@ -1,18 +1,18 @@
-.buttonStroke{
+.buttonStroke {
     width: 155px;
 }
 
-.buttonStroke--stroke{
+.buttonStroke--stroke {
     fill: transparent;
-    stroke:$strokeColor;
-    stroke-width:15;
-    stroke-linecap:round;
-    
+    stroke: $strokeColor;
+    stroke-width: 15;
+    stroke-linecap: round;
+
     stroke-dashoffset: 3200;
     stroke-dasharray: 3200;
 
     transition: fill .4s cubic-bezier(0.63, 0, 0.34, 1);
-    
+
 }
 
 @keyframes drawLineIn {
@@ -21,7 +21,7 @@
         animation-timing-function: cubic-bezier(0.63, 0, 0.34, 1);
     }
 
-    100%{
+    100% {
         stroke-dashoffset: 0;
     }
 }
@@ -32,18 +32,37 @@
         animation-timing-function: cubic-bezier(0.63, 0, 0.34, 1);
     }
 
-    100%{
+    100% {
         stroke-dashoffset: -3200;
     }
 }
 
-.phonePortfolio{
+.lightDark {
+    width: 55px;
+}
+
+.lightDark--stroke {
+    fill: transparent;
+    stroke: $strokeColor;
+    stroke-width: 25;
+    stroke-linecap: round;
+
+    stroke-dashoffset: -190;
+    stroke-dasharray: 6575;
+
+
+    transition: all .7s cubic-bezier(0.63, 0, 0.34, 1);
+
+}
+
+.phonePortfolio {
     width: 508px;
-    .phonePortfolio--stroke{
+
+    .phonePortfolio--stroke {
         fill: transparent;
-        stroke:$strokeColorRed;
-        stroke-width:4;
-        stroke-linecap:round;
+        stroke: $strokeColorRed;
+        stroke-width: 4;
+        stroke-linecap: round;
 
         stroke-dashoffset: -6425;
         stroke-dasharray: 6425;
@@ -52,34 +71,35 @@
     }
 }
 
-@keyframes drawPhoneIn{
-    0%{
+@keyframes drawPhoneIn {
+    0% {
         stroke-dashoffset: -6425;
     }
 
-    100%{
+    100% {
         stroke-dashoffset: 0;
     }
 }
 
-@keyframes drawPhoneOut{
-    0%{
+@keyframes drawPhoneOut {
+    0% {
         stroke-dashoffset: 0;
     }
 
-    100%{
+    100% {
         stroke-dashoffset: 6425;
     }
 }
 
-.desktopPortfolio{
+.desktopPortfolio {
     width: 508px;
-    .desktopPortfolio--stroke{
+
+    .desktopPortfolio--stroke {
         fill: transparent;
-        stroke:$strokeColorRed;
-        stroke-width:4;
-        stroke-linecap:round;
-    
+        stroke: $strokeColorRed;
+        stroke-width: 4;
+        stroke-linecap: round;
+
         stroke-dashoffset: -8450;
         stroke-dasharray: 8450;
 
@@ -87,22 +107,22 @@
     }
 }
 
-@keyframes drawDesktopIn{
-    0%{
+@keyframes drawDesktopIn {
+    0% {
         stroke-dashoffset: 8450;
     }
 
-    100%{
+    100% {
         stroke-dashoffset: 0;
     }
 }
 
-@keyframes drawDesktopOut{
-    0%{
+@keyframes drawDesktopOut {
+    0% {
         stroke-dashoffset: 0;
     }
 
-    100%{
+    100% {
         stroke-dashoffset: -8450;
     }
 }

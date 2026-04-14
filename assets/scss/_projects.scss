@@ -10,7 +10,6 @@
         font-family: chau;
         font-size: 4.5rem;
         line-height: 1.2;
-        font-weight: 100;
 
         span {
             color: $fontFocus;
@@ -36,13 +35,17 @@
         padding: 2.5rem 2rem;
         border-radius: 1.5rem;
 
-        .phonePortfolio--stroke {
-            animation: drawPhoneOut 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
+        &.out{
+
+            .phonePortfolio--stroke {
+                animation: drawPhoneOut 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
+            }
+    
+            .desktopPortfolio--stroke {
+                animation: drawDesktopOut 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
+            }
         }
 
-        .desktopPortfolio--stroke {
-            animation: drawDesktopOut 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
-        }
 
         &.visible {
             .phonePortfolio--stroke {

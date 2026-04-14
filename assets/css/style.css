@@ -19,11 +19,17 @@
   src: url(../fonts/Caveat_Brush/CaveatBrush-Regular.ttf);
 }
 
+@font-face {
+  font-family: Asap;
+  src: url(../fonts/Asap_Condensed/AsapCondensed-Light.ttf);
+}
+
 header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 100;
   padding: 1rem 1rem;
   -webkit-transition: -webkit-transform .5s ease-in-out;
   transition: -webkit-transform .5s ease-in-out;
@@ -78,8 +84,14 @@ header .header__container .header__right {
   gap: 1.5rem;
 }
 
-header .header__container .header__right img {
-  width: 50px;
+header .header__container .header__right .lightDark {
+  cursor: pointer;
+}
+
+header .header__container .header__right .lightDark:hover .lightDark--stroke {
+  stroke: #9E3B43;
+  stroke-dashoffset: 6320;
+  stroke-dasharray: 6575;
 }
 
 .buttonStroke {
@@ -139,6 +151,21 @@ header .header__container .header__right img {
   100% {
     stroke-dashoffset: -3200;
   }
+}
+
+.lightDark {
+  width: 55px;
+}
+
+.lightDark--stroke {
+  fill: transparent;
+  stroke: #2C2C2C;
+  stroke-width: 25;
+  stroke-linecap: round;
+  stroke-dashoffset: -190;
+  stroke-dasharray: 6575;
+  -webkit-transition: all 0.7s cubic-bezier(0.63, 0, 0.34, 1);
+  transition: all 0.7s cubic-bezier(0.63, 0, 0.34, 1);
 }
 
 .phonePortfolio {
@@ -540,7 +567,6 @@ footer .container .footer__der .footer__social .wpp img:first-child, footer .con
   font-family: chau;
   font-size: 4.5rem;
   line-height: 1.2;
-  font-weight: 100;
 }
 
 .hero h1 span {
@@ -577,12 +603,12 @@ footer .container .footer__der .footer__social .wpp img:first-child, footer .con
   border-radius: 1.5rem;
 }
 
-.projects .project .phonePortfolio--stroke {
+.projects .project.out .phonePortfolio--stroke {
   -webkit-animation: drawPhoneOut 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
           animation: drawPhoneOut 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
 }
 
-.projects .project .desktopPortfolio--stroke {
+.projects .project.out .desktopPortfolio--stroke {
   -webkit-animation: drawDesktopOut 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
           animation: drawDesktopOut 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
 }
@@ -687,6 +713,307 @@ footer .container .footer__der .footer__social .wpp img:first-child, footer .con
   width: 485px;
 }
 
+.containerAbout .animationScroll {
+  height: 100vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.containerAbout .animationScroll img {
+  width: 500px;
+}
+
+.containerAbout .sections {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+.containerAbout .sections .section .section__msg {
+  -webkit-transform: rotate(-12deg);
+          transform: rotate(-12deg);
+  margin-bottom: 8rem;
+}
+
+.containerAbout .sections .section .section__msg p {
+  font-family: caveat;
+  font-size: 2.5rem;
+}
+
+.containerAbout .sections .section .section__msg p:last-child {
+  margin-left: 5rem;
+  margin-top: -5px;
+}
+
+.containerAbout .sections .section h3 {
+  line-height: 1;
+  font-family: chau;
+  font-size: 4.4rem;
+}
+
+.containerAbout .sections .section p {
+  font-size: 1.6rem;
+  line-height: 1.1;
+}
+
+.containerAbout .sections .section .section__title {
+  position: relative;
+}
+
+.containerAbout .sections .section .section__title p {
+  font-family: asap;
+}
+
+.containerAbout .sections .section .section__title .section__msg {
+  margin-bottom: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.containerAbout .sections .section .section__title .section__msg p {
+  font-family: caveat;
+  font-size: 1.7rem;
+}
+
+.containerAbout .sections .section .divider {
+  width: 100%;
+  height: 1px;
+  background-color: #AAAAAA;
+}
+
+.containerAbout .sections .section .section__container {
+  padding: 3rem 2.5rem;
+  background-color: #faf2de;
+  border-radius: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8rem;
+}
+
+.containerAbout .sections .section.about {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
+}
+
+.containerAbout .sections .section.about .about__typing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.containerAbout .sections .section.about .about__typing h2 {
+  font-size: 5.1rem;
+  line-height: 1.2;
+}
+
+.containerAbout .sections .section.about .about__typing h2:last-child {
+  -webkit-animation: flicker .7s infinite;
+          animation: flicker .7s infinite;
+}
+
+@-webkit-keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.containerAbout .sections .section.about .about__paragraph {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+.containerAbout .sections .section.methods .section__container .methods__method {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+}
+
+.containerAbout .sections .section.methods .section__container .methods__method .methods__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.containerAbout .sections .section.methods .section__container .methods__method.strategy .section__title .section__msg {
+  top: -1rem;
+}
+
+.containerAbout .sections .section.methods .section__container .methods__method.strategy .section__title .section__msg p:last-child {
+  margin-left: 2.5rem;
+}
+
+.containerAbout .sections .section.methods .section__container .methods__method.design .section__title .section__msg, .containerAbout .sections .section.methods .section__container .methods__method.develop .section__title .section__msg, .containerAbout .sections .section.methods .section__container .methods__method.quality .section__title .section__msg {
+  top: -3rem;
+}
+
+.containerAbout .sections .section.methods .section__container .methods__method.design .section__title .section__msg p, .containerAbout .sections .section.methods .section__container .methods__method.develop .section__title .section__msg p, .containerAbout .sections .section.methods .section__container .methods__method.quality .section__title .section__msg p {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.containerAbout .sections .section.methods .section__container .methods__method .methods__elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.containerAbout .sections .section.methods .section__container .methods__method .methods__elements.icons {
+  gap: 2.5rem;
+}
+
+.containerAbout .sections .section.methods .section__container .methods__method .methods__elements .methods__elementsIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .5rem;
+}
+
+.containerAbout .sections .section.methods .section__container .methods__method .methods__elements .methods__elementsIcons img {
+  width: 70px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.containerAbout .sections .section.methods .section__container .methods__method .methods__elements .methods__elementsIcons span {
+  font-size: 1.5rem;
+  font-family: caveat;
+}
+
+.containerAbout .sections .section.jobs .section__container, .containerAbout .sections .section.studies .section__container {
+  background-color: transparent;
+  gap: 4rem;
+}
+
+.containerAbout .sections .section.jobs .section__container .section__exp, .containerAbout .sections .section.studies .section__container .section__exp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.containerAbout .sections .section.jobs .section__container .section__exp .section__msg, .containerAbout .sections .section.studies .section__container .section__exp .section__msg {
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(-12deg);
+          transform: translateY(-50%) rotate(-12deg);
+}
+
+.containerAbout .sections .section.jobs .section__container .section__exp .section__itemList, .containerAbout .sections .section.studies .section__container .section__exp .section__itemList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.containerAbout .sections .section.jobs .section__container .section__exp .section__itemList .section__item, .containerAbout .sections .section.studies .section__container .section__exp .section__itemList .section__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1rem;
+}
+
+.containerAbout .sections .section.jobs .section__container .section__exp .section__itemList .section__item img, .containerAbout .sections .section.studies .section__container .section__exp .section__itemList .section__item img {
+  margin-top: .3rem;
+  width: 25px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.containerAbout .sections .section.studies .section__container {
+  background-color: transparent;
+  gap: 4rem;
+}
+
+.containerAbout .sections .section.studies .section__container .section__exp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.containerAbout .sections .section.studies .section__container .section__exp .section__itemList {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -711,6 +1038,13 @@ main {
   margin-right: auto;
 }
 
+.container.containerAbout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2.5rem;
+}
+
 li {
   list-style: none;
 }
@@ -728,5 +1062,6 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   line-height: 1;
+  font-weight: 100;
 }
 /*# sourceMappingURL=style.css.map */
