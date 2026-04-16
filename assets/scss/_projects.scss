@@ -35,12 +35,12 @@
         padding: 2.5rem 2rem;
         border-radius: 1.5rem;
 
-        &.out{
+        &.out {
 
             .phonePortfolio--stroke {
                 animation: drawPhoneOut 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
             }
-    
+
             .desktopPortfolio--stroke {
                 animation: drawDesktopOut 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
             }
@@ -102,12 +102,25 @@
         .project__der {
             position: relative;
 
-            img {
+            .project__img {
                 position: absolute;
                 z-index: 1;
 
+                overflow: clip;
+
+                display: grid;
+                place-items: center;
+
+                border-radius: 12px;
+
 
                 transform: translate(-50%, -50%);
+
+                img {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
 
             }
 
@@ -119,18 +132,40 @@
 
 
             &.mobile {
-                img {
-                    top: 50%;
-                    left: 51.3%;
+
+                .project__img {
                     width: 183px;
+                    height: 320px;
+                    top: 48%;
+                    left: 51.6%;
+
+                    img {
+                        width: 670px;
+
+                        top: 50%;
+                        left: 50%;
+
+                        transform: translate(-50%, -50%);
+                    }
                 }
             }
 
             &.desktop {
-                img {
+                .project__img {
                     top: 39%;
                     left: 50%;
-                    width: 485px;
+                    width: 475px;
+                    height: 270px;
+
+                    img {
+                        width: 1140px;
+
+
+                        top: 50%;
+                        left: 50%;
+
+                        transform: translate(-50%, -50%);
+                    }
                 }
             }
 

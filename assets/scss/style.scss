@@ -14,6 +14,7 @@
 //Paginas
 @import 'projects';
 @import 'about';
+@import 'case';
 
 *{
     box-sizing: border-box;
@@ -23,6 +24,7 @@
 }
 
 body{
+    cursor: none;
     background-color: $background;
     font-family: Bellota, sans-serif;
 }
@@ -51,6 +53,16 @@ li{
 a {
     text-decoration: none;
     list-style: none;
+    
+    &:hover{
+        cursor: none;
+    }
+}
+
+button{
+    &:hover{
+        cursor: none;
+    }
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -62,6 +74,43 @@ h1,h2,h3,h4,h5,h6{
 p{
     line-height: 1;
     font-weight: 100;
+}
+
+
+#cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+
+  svg{
+    width: 35px;
+  }
+}
+
+#cursor path {
+  fill: none;
+  stroke: $strokeColor;
+  stroke-width: 11;
+  
+
+  transition: stroke-dashoffset .5s ease, stroke-dasharray .5s ease;
+}
+
+#trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 998;
+
+  pointer-events: none;
+  overflow: visible;
 }
 
 
