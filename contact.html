@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Proyect</title>
+  <title>Portafolio</title>
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- <link rel="stylesheet" href="assets/scss/style.scss" /> -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,7 +14,7 @@
     rel="stylesheet" />
 </head>
 
-<body>
+<body class="dark">
 
   <header class="header">
     <div class="header__container">
@@ -36,7 +36,7 @@
             <a href="./index.html">Proyectos</a>
           </li>
 
-          <li class="button__svg active">
+          <li class="button__svg ">
             <svg class="buttonStroke" version="1.1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1311.1 505.9"
               style="enable-background:new 0 0 1311.1 505.9;" xml:space="preserve">
@@ -48,7 +48,7 @@
             <a href="./about.html">Sobre mí</a>
           </li>
 
-          <li class="button__svg">
+          <li class="button__svg active">
             <svg class="buttonStroke" version="1.1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1311.1 505.9"
               style="enable-background:new 0 0 1311.1 505.9;" xml:space="preserve">
@@ -136,22 +136,39 @@
                 </svg>
               </div>
         </form>
-        <div class="footer__social">
-          <span>Telegram</span>
-          <a href="" class="wpp">
-            <img src="./assets/images/LogoWppFill.png" alt="">
-            <img src="./assets/images/LogoWpp.png" alt="">
-          </a>
+        <div class="contact__social">
+          <div class="contact-item__social">
+            <span class="item-title">Telegram</span>
+            <a href="" class="telegram">
+              <img src="./assets/images/LogoTelegramFill.png" alt="LogoTelegramFill">
+              <img src="./assets/images/LogoTelegram.png" alt="LogoTelegram">
+            </a>
 
-          <a href="" class="linkedin">
-            <img src="./assets/images/LogoInFill.png" alt="">
-            <img src="./assets/images/LogoIn.png" alt="">
-          </a>
+          </div>
+          <div class="contact-item__social">
+            <span class="item-title">WhatsApp</span>
+            <a href="" class="wpp">
+  
+              <img src="./assets/images/LogoWppFill.png" alt="LogoWppFill">
+              <img src="./assets/images/LogoWpp.png" alt="LogoWpp">
+            </a>
+            
+          </div>
 
-          <a href="" class="telegram">
-            <img src="./assets/images/LogoTelegramFill.png" alt="">
-            <img src="./assets/images/LogoTelegram.png" alt="">
-          </a>
+          <div class="contact-item__social">
+            <span class="item-title">Correo</span>
+            <a href="" class="email">
+              <img src="./assets/images/LogoCorreoFill.png" alt="LogoCorreoFill ">
+              <img src="./assets/images/LogoCorreo.png" alt="LogoCorreo">
+            </a>
+          </div>
+            <div class="contact-item__social">
+            <span class="item-title">LinkedIn</span>
+            <a href="" class="linkedin">
+              <img src="./assets/images/LogoInFill.png" alt="LogoInFill">
+              <img src="./assets/images/LogoIn.png" alt="LogoIn">
+            </a>
+          </div>
         </div>
       </div>
 
@@ -218,47 +235,7 @@
   <script src="./assets/js/script.js"></script>
   <script src="./assets/js/animationButtonStroke.js"></script>
 
-  <script>
-    const textElement = document.getElementById("typing-text");
-    const words = [
-      "DISEÑADOR DE PRODUCTO",
-      "DISEÑADOR UI/UX",
-      "ANIMADOR 2D",
-      "MAQUETADOR HTML / CSS",
-      "INGENIERO MULTIMEDIA",
-    ];
-    let wordIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let typeSpeed = 150;
-
-    function type() {
-      const currentWord = words[wordIndex];
-
-      if (isDeleting) {
-        textElement.textContent = currentWord.substring(0, charIndex - 1);
-        charIndex--;
-        typeSpeed = 70;
-      } else {
-        textElement.textContent = currentWord.substring(0, charIndex + 1);
-        charIndex++;
-        typeSpeed = 70;
-      }
-
-      if (!isDeleting && charIndex === currentWord.length) {
-        isDeleting = true;
-        typeSpeed = 1000;
-      } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        wordIndex = (wordIndex + 1) % words.length;
-        typeSpeed = 500;
-      }
-
-      setTimeout(type, typeSpeed);
-    }
-
-    document.addEventListener("DOMContentLoaded", type);
-  </script>
+  <script src="./assets/js/themeControl.js"></script>
 </body>
 
 </html>
