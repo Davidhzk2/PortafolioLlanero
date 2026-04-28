@@ -1,0 +1,198 @@
+.containerContact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2.5rem;
+  flex-flow: row;
+  flex: 0 0 auto;
+
+  .contactHero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .img {
+      width: 480px;
+      aspect-ratio: 1.25714 /1;
+    }
+  }
+
+  .contactInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    height: 100vh;
+
+    .info-text {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      gap: 10px;
+
+      h1 {
+        font-size: 4rem;
+        line-height: 1.1;
+        font-weight: 700;
+        max-width: 75%;
+      }
+      p {
+        font-size: 1.6rem;
+        line-height: 1.1;
+      }
+    }
+
+    .contactForm {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      input,
+      textarea {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #9e3b43;
+        padding: 12px 20px;
+        font-size: 18px;
+        outline: none;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        font-family: caveatBrush;
+        font-size: 32px;
+        color: rgb(204, 203, 188);
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      .form-group {
+        display: flex;
+        gap: 24px;
+      }
+
+      .button-start {
+        display: flex;
+        justify-content: center;
+        padding-top: 16px;
+        width: 25%;
+      }
+
+      .formButton {
+        width: -webkit-max-content;
+        width: -moz-max-content;
+        width: max-content;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        font-family: caveatBrush;
+        font-size: 1.6rem;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-transition: color 0.3s ease-in-out;
+        transition: color 0.3s ease-in-out;
+        background-color: transparent;
+        border: none;
+      }
+      .formButton:hover {
+        color: #9e3b43;
+        cursor: pointer;
+      }
+    }
+
+    .contact__details {
+      position: absolute;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-direction: column;
+      -webkit-box-align: end;
+      -ms-flex-align: center;
+      align-items: end;
+      left:57%;
+      top: 68%;
+
+      .contact__msg {
+        -webkit-transform: rotate(12deg);
+        transform: rotate(12deg);
+
+        p {
+          font-family: caveat;
+          font-size: 1.5rem;
+        }
+
+        p:last-child {
+          margin-left: 5rem;
+          margin-top: -5px;
+        }
+      }
+
+      .arrowImg {
+        margin-right: 60%;
+        width: 90px;
+        height: auto;
+        -o-object-fit: contain;
+        object-fit: contain;
+        -webkit-transform: rotate(175deg);
+        transform: rotate(175deg);
+      }
+    }
+
+    .contact__social {
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      gap: 1rem;
+
+      .contact-item__social {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        span {
+          font-family: caveat;
+          font-size: 1.575rem;
+          font-weight: 100;
+        }
+        img {
+          width: 65px;
+        }
+
+        .wpp,
+        .linkedin,
+        .email,
+        .telegram {
+          position: relative;
+          margin: auto;
+        }
+  
+        .wpp img:first-child,
+        .linkedin img:first-child,
+        .email img:first-child,
+        .telegram img:first-child {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          -webkit-transform: translateY(-50%, -60%);
+          transform: translateY(-50%, -60%);
+          -webkit-transition: opacity 0.2s ease;
+          transition: opacity 0.2s ease;
+        }
+  
+        .wpp:hover img:first-child,
+        .linkedin:hover img:first-child,
+        .email:hover img:first-child,
+        .telegram:hover img:first-child {
+          opacity: 1;
+        }
+      }
+
+    }
+  }
+}

@@ -11,9 +11,10 @@
 @import 'footer';
 
 //Paginas
+@import 'case';
 @import 'projects';
 @import 'about';
-@import 'case';
+@import 'contact';
 
 * {
     box-sizing: border-box;
@@ -26,6 +27,10 @@ body {
     cursor: none;
     background-color: $background;
     font-family: Bellota, sans-serif;
+}
+
+body.dark-mode {
+
 }
 
 main {
