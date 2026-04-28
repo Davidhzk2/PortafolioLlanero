@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
 
 //Componentes
@@ -14,54 +13,181 @@
 //Paginas
 @import 'projects';
 @import 'about';
+@import 'case';
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     color: $fontColor;
 }
 
-body{
+body {
+    cursor: none;
     background-color: $background;
     font-family: Bellota, sans-serif;
 }
 
-main{
+main {
     margin-left: auto;
     margin-right: auto;
 }
 
-.container{
+.container {
     max-width: 1440px;
 
     margin-left: auto;
     margin-right: auto;
 
-    &.containerAbout{
+    &.containerAbout {
         display: flex;
         gap: 2.5rem;
     }
+
+    &.containerCase {
+        margin-top: 8rem;
+    }
 }
 
-li{
+li {
     list-style: none;
 }
 
 a {
     text-decoration: none;
     list-style: none;
+
+    &:hover {
+        cursor: none;
+    }
 }
 
-h1,h2,h3,h4,h5,h6{
+button {
+    &:hover {
+        cursor: none;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: chau;
     font-weight: 100;
     margin: 0;
 }
 
-p{
+p {
     line-height: 1;
     font-weight: 100;
 }
 
 
+#cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+
+    svg {
+        width: 35px;
+    }
+}
+
+#cursor path {
+    fill: none;
+    stroke: $strokeColor;
+    stroke-width: 11;
+
+
+    transition: stroke-dashoffset .5s ease, stroke-dasharray .5s ease;
+}
+
+#trail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 998;
+
+    pointer-events: none;
+    overflow: visible;
+}
+
+
+::view-transition-group(*) {
+    animation-duration: 0.5s;
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none;
+}
+
+::view-transition-old(root) {
+    animation: fadeOut 1.2s ease forwards;
+}
+
+::view-transition-new(root) {
+    animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#prueba_1,
+#prueba_2{
+    view-transition-name: poster;
+}
+
+::view-transition-group(poster) {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+::view-transition-old(poster),
+::view-transition-new(poster) {
+    animation: none;
+    mix-blend-mode: normal;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}

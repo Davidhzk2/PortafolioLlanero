@@ -22,9 +22,37 @@
 }
 
 .projects {
+
+    position: relative;
+
     display: flex;
     flex-direction: column;
     gap: 5rem;
+
+    .project__next {
+        position: absolute;
+        right: 0;
+        top: -8rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1.8rem;
+
+        rotate: 15deg;
+
+
+        span {
+            font-family: caveat;
+            font-size: 2.4rem;
+        }
+
+        img {
+            display: block;
+            rotate: 145deg;
+
+            width: 100px;
+        }
+    }
 
     .project {
         display: flex;
@@ -35,12 +63,12 @@
         padding: 2.5rem 2rem;
         border-radius: 1.5rem;
 
-        &.out{
+        &.out {
 
             .phonePortfolio--stroke {
                 animation: drawPhoneOut 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
             }
-    
+
             .desktopPortfolio--stroke {
                 animation: drawDesktopOut 2s cubic-bezier(0.63, 0, 0.34, 1) forwards;
             }
@@ -102,12 +130,20 @@
         .project__der {
             position: relative;
 
-            img {
+            .project__img {
                 position: absolute;
                 z-index: 1;
 
+                overflow: hidden;
+
+                border-radius: 12px;
+
 
                 transform: translate(-50%, -50%);
+
+                img{
+                    object-fit: contain;
+                }
 
             }
 
@@ -119,18 +155,33 @@
 
 
             &.mobile {
-                img {
-                    top: 50%;
-                    left: 51.3%;
+
+                .project__img {
                     width: 183px;
+                    height: 320px;
+                    top: 48%;
+                    left: 51.6%;
+
+                    img {
+                        margin-left: -244px;
+                        width: 670px;
+                    }
                 }
             }
 
             &.desktop {
-                img {
+                .project__img {
                     top: 39%;
                     left: 50%;
-                    width: 485px;
+                    width: 475px;
+                    height: 270px;
+
+                    img {
+                        margin-left: -330px;
+                        margin-top: -137px;
+
+                        width: 1140px;
+                    }
                 }
             }
 

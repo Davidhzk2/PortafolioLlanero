@@ -6,13 +6,13 @@
             animation: drawLineIn .4s linear forwards;
         }
 
-        a {
+        span {
             color: $redButton;
         }
 
         &.button__svg--curriculum {
 
-            a {
+            span {
                 color: $whiteButton;
             }
 
@@ -38,7 +38,7 @@
     display: grid;
     place-items: center;
 
-    a {
+    span {
         width: max-content;
         position: absolute;
 
@@ -56,7 +56,7 @@
     &.active {
         pointer-events: none;
 
-        a {
+        span {
             color: $redButton;
         }
 

@@ -29,7 +29,7 @@ const observer = new IntersectionObserver((entries) => {
 
 elements.forEach(el => observer.observe(el));*/
 
-const elements = document.querySelectorAll("#project");
+const elements = document.querySelectorAll(".project");
 
 elements.forEach(el => {
   let state = "idle"; // idle | animating-in | animating-out
