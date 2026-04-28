@@ -1421,18 +1421,13 @@ p {
   }
 }
 
-#prueba_1,
-#prueba_2 {
-  view-transition-name: poster;
-}
-
-::view-transition-group(poster) {
+::view-transition-group(*) {
   overflow: hidden;
   border-radius: 12px;
 }
 
-::view-transition-old(poster),
-::view-transition-new(poster) {
+::view-transition-old(*),
+::view-transition-new(*) {
   -webkit-animation: none;
           animation: none;
   mix-blend-mode: normal;
