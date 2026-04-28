@@ -543,6 +543,105 @@ footer .container .footer__der .footer__social .wpp img:first-child, footer .con
   left: 0;
   opacity: 0;
   -webkit-transform: translateY(-50%, -50%);
+  transform: translateY(-50%, -50%);
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+
+.contact__social {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3.25rem;
+}
+
+.contact-item__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+
+.contact__details{
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: end;
+  -ms-flex-align: center;
+  align-items: end;
+  left: 65%;
+  top: 67%;
+}
+.contact__msg {
+  -webkit-transform: rotate(12deg);
+  transform: rotate(12deg);
+}
+
+.contact__msg p {
+  font-family: caveat;
+  font-size: 1.5rem;
+}
+
+.contact__msg p:last-child {
+  margin-left: 5rem;
+  margin-top: -5px;
+}
+
+
+.contact__details .arrowImg {
+  margin-right: 60%;
+  width:90px;
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -webkit-transform: rotate(175deg);
+  transform: rotate(175deg);
+}
+
+.contact-item__social span {
+  font-family: caveat;
+  font-size: 1.875rem;
+  font-weight: 100;
+}
+
+.contact__social img {
+  width: 65px;
+}
+
+.contact__social .wpp,
+.contact__social .linkedin,
+.contact__social .email,
+.contact__social .telegram {
+  position: relative;
+  margin: auto;
+}
+
+.contact__social .wpp img:first-child,
+.contact__social .linkedin img:first-child,
+.contact__social .email img:first-child,
+.contact__social .telegram img:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transform: translateY(-50%, -60%);
+  transform: translateY(-50%, -60%);
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+
+.contact__social .wpp:hover img:first-child,
+.contact__social .linkedin:hover img:first-child,
+.contact__social .email:hover img:first-child,
+.contact__social .telegram:hover img:first-child {
+  opacity: 1;
           transform: translateY(-50%, -50%);
   -webkit-transition: opacity .2s ease;
   transition: opacity .2s ease;
