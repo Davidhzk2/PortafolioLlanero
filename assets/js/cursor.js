@@ -33,13 +33,59 @@ let isHovering = false;
 let isMoving = false;
 let lastMoveTime = 0;
 
-let mouse = { x: 0, y: 0 };
+// 🔥 cargar posición guardada
+const savedX = localStorage.getItem("cursorX");
+const savedY = localStorage.getItem("cursorY");
 
-// 🔥 ya no necesitamos suavizado real
-let pos = { x: 0, y: 0 };
+let mouse = {
+  x: savedX ? parseFloat(savedX) : window.innerWidth / 2,
+  y: savedY ? parseFloat(savedY) : window.innerHeight / 2
+};
+
+let pos = { x: mouse.x, y: mouse.y };
 
 let currentTrail = null;
 let currentPoints = [];
+
+// 🔥 guardar posición
+function saveCursorPosition(x, y) {
+  localStorage.setItem("cursorX", x);
+  localStorage.setItem("cursorY", y);
+}
+
+// 🔥 actualizar cursor
+function updateCursorPosition(x, y) {
+  mouse.x = x;
+  mouse.y = y;
+
+  pos.x = x;
+  pos.y = y;
+
+  cursor.style.transform = `translate(${x}px, ${y}px)`;
+}
+
+// 🔹 cuando vuelves a la pestaña
+document.addEventListener("visibilitychange", () => {
+  if (!document.hidden) {
+    updateCursorPosition(mouse.x, mouse.y);
+  }
+});
+
+// 🔹 cuando el mouse entra
+window.addEventListener("mouseenter", (e) => {
+  updateCursorPosition(e.clientX, e.clientY);
+});
+
+// 🔹 cuando haces click → 🔥 GUARDAMOS POSICIÓN
+window.addEventListener("mousedown", (e) => {
+  saveCursorPosition(e.clientX, e.clientY);
+  updateCursorPosition(e.clientX, e.clientY);
+});
+
+// 🔹 fallback al cargar
+window.addEventListener("load", () => {
+  updateCursorPosition(mouse.x, mouse.y);
+});
 
 // hover real
 function detectHover(x, y) {
@@ -48,7 +94,7 @@ function detectHover(x, y) {
   return el.closest("button, a, .header__right");
 }
 
-// suavizado del path (esto sí se queda)
+// suavizado
 function buildSmoothPath(points) {
   if (points.length < 2) return "";
 
@@ -115,7 +161,6 @@ window.addEventListener("mousemove", (e) => {
   mouse.x = e.clientX;
   mouse.y = e.clientY;
 
-  // 🔥 ahora el cursor sigue EXACTO
   pos.x = mouse.x;
   pos.y = mouse.y;
 
@@ -146,7 +191,6 @@ window.addEventListener("mousemove", (e) => {
     currentPoints = [];
   }
 
-  // trail sigue usando pos (ahora exacto)
   currentPoints.push([
     pos.x + TRAIL_OFFSET_X,
     pos.y + TRAIL_OFFSET_Y
@@ -160,7 +204,7 @@ window.addEventListener("mousemove", (e) => {
   applyCursor();
 });
 
-// animación (solo render)
+// animación
 function animate(time) {
   cursor.style.transform = `translate(${pos.x}px, ${pos.y}px)`;
 
