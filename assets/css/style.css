@@ -543,7 +543,6 @@ footer .container .footer__der .footer__social .wpp img:first-child, footer .con
   left: 0;
   opacity: 0;
   -webkit-transform: translateY(-50%, -50%);
-<<<<<<< HEAD
   transform: translateY(-50%, -50%);
   -webkit-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
@@ -643,11 +642,9 @@ footer .container .footer__der .footer__social .wpp img:first-child, footer .con
 .contact__social .email:hover img:first-child,
 .contact__social .telegram:hover img:first-child {
   opacity: 1;
-=======
           transform: translateY(-50%, -50%);
   -webkit-transition: opacity .2s ease;
   transition: opacity .2s ease;
->>>>>>> c6cf9aac8862964044517116c996f09594e56a37
 }
 
 .hero {
