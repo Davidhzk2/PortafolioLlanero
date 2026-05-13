@@ -1,4 +1,103 @@
 // =======================
+// NAVEGACIÓN ENTRE PÁGINAS
+// =======================
+
+// Flag: CSS, fuentes e imágenes están listos
+let transitionsReady = false;
+
+window.addEventListener("load", () => {
+
+  // Pequeño buffer para que el browser
+  // termine de parsear los @keyframes
+  setTimeout(() => {
+    transitionsReady = true;
+  }, 100);
+
+});
+
+document
+  .querySelectorAll("a[data-transition]")
+  .forEach((link) => {
+
+    link.addEventListener("click", (e) => {
+
+      e.preventDefault();
+
+      const transitionName =
+        link.dataset.transition;
+
+      sessionStorage.setItem(
+        "active-transition",
+        transitionName
+      );
+
+      const element = document.querySelector(
+        `[data-transition-target="${transitionName}"]`
+      );
+
+      // Cancela animaciones activas en el botón que disparó el click
+      const btn = e.currentTarget.closest(".button__svg");
+
+      if (btn) {
+        btn.getAnimations().forEach(a => a.cancel());
+      }
+
+      const navigate = () => {
+
+        if (document.startViewTransition && transitionsReady) {
+
+          if (element) {
+            element.style.animation = "none";
+            element.getBoundingClientRect();
+            element.style.viewTransitionName = transitionName;
+          }
+
+          // El snapshot se toma ANTES de ejecutar el callback,
+          // eliminando la condición de carrera
+          document.startViewTransition(() => {
+            window.location.href = link.href;
+          });
+
+        } else {
+
+          // Fallback: browser sin soporte o recursos aún cargando
+          if (element) {
+            element.style.animation = "none";
+            element.getBoundingClientRect();
+            element.style.viewTransitionName = transitionName;
+            element.getBoundingClientRect();
+          }
+
+          window.location.href = link.href;
+
+        }
+
+      };
+
+      // Si la página ya está lista, navegar de inmediato.
+      // Si no, esperar al load y navegar después.
+      // { once: true } evita que se acumulen navegaciones
+      // si el usuario hace click varias veces antes de que cargue.
+      if (transitionsReady) {
+        navigate();
+      } else {
+        window.addEventListener("load", () => {
+          setTimeout(navigate, 100);
+        }, { once: true });
+      }
+
+    });
+
+  });
+
+
+// =======================
+// INIT
+// =======================
+
+applyTransitionName();
+
+// =======================
 // HEADER
 // =======================
 
@@ -130,78 +229,25 @@ function applyTransitionName() {
 
   if (!element) return;
 
-  // 👇 asignar transición
   element.style.viewTransitionName =
     currentTransition;
 
-  // 👇 cleanup después de registrar
-  requestAnimationFrame(() => {
+  const cleanup = () => {
+    element.style.viewTransitionName = "none";
+    sessionStorage.removeItem("active-transition");
+  };
 
-    requestAnimationFrame(() => {
+  // Limpiar cuando la animación de entrada termine
+  document.addEventListener(
+    "transitionend",
+    cleanup,
+    { once: true }
+  );
 
-      element.style.viewTransitionName = "none";
-
-      sessionStorage.removeItem(
-        "active-transition"
-      );
-
-    });
-
-  });
+  // Fallback: limpiar igual si transitionend no dispara.
+  // Debe coincidir con la duración máxima de tu fadeIn/fadeOut
+  setTimeout(cleanup, 2000);
 
 }
 
 
-// =======================
-// NAVEGACIÓN ENTRE PÁGINAS
-// =======================
-
-document
-  .querySelectorAll("a[data-transition]")
-  .forEach((link) => {
-
-    link.addEventListener("click", async (e) => {
-
-      e.preventDefault();
-
-      const transitionName =
-        link.dataset.transition;
-
-      sessionStorage.setItem(
-        "active-transition",
-        transitionName
-      );
-
-      const element = document.querySelector(
-        `[data-transition-target="${transitionName}"]`
-      );
-
-      if (element) {
-
-        // 👇 registrar shared element
-        element.style.viewTransitionName =
-          transitionName;
-
-        // 👇 FORZAR REFLOW REAL
-        element.getBoundingClientRect();
-
-      }
-
-      // 👇 pequeño delay para estabilizar
-      await new Promise(resolve =>
-        setTimeout(resolve, 50)
-      );
-
-      // 👇 navegar
-      window.location.href = link.href;
-
-    });
-
-  });
-
-
-// =======================
-// INIT
-// =======================
-
-applyTransitionName();

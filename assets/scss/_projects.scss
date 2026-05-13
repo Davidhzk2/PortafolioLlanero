@@ -59,6 +59,7 @@
         align-items: center;
         justify-content: space-evenly;
         background-color: $cardBackground;
+        border: solid 1px $cardBorder;
 
         padding: 2.5rem 2rem;
         border-radius: 1.5rem;

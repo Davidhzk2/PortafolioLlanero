@@ -2,10 +2,12 @@ $colors__cream: #FFF8E7;
 $colors__creamFocus: #faf2de;
 $colors__red: #9E3B43;
 $colors__black: #2C2C2C;
+$colors__creamBorder: #E3DAC3;
 
 // Uso de colores
 $background: $colors__cream;
 $cardBackground: $colors__creamFocus;
+$cardBorder: $colors__creamBorder;
 $footerBg: $colors__creamFocus;
 
 $redButton: $colors__red;
@@ -14,5 +16,6 @@ $whiteButton: $colors__cream;
 $fontColor: $colors__black;
 $strokeColor: $colors__black;
 $strokeColorRed: $colors__red;
+$strokeCursor: $colors__cream;
 
 $fontFocus: $colors__red;

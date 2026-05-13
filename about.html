@@ -5,6 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portafolio</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      cursor: none !important;
+    }
+  </style>
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- <link rel="stylesheet" href="assets/scss/style.scss" /> -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,83 +31,82 @@
   </div>
   <svg id="trail"></svg>
 
-    <header class="header">
-        <div class="header__container">
+  <header class="header">
+    <div class="header__container">
 
-            <img src="./assets/images/Logo.png" alt="Logo">
+      <img src="./assets/images/Logo.png" alt="Logo">
 
-            <nav>
-                <ul>
+      <nav>
+        <ul>
 
-                    <li class="button__svg">
-                        <a href="./index.html">
-                            <svg class="buttonStroke" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1311.1 505.9"
-                                style="enable-background:new 0 0 1311.1 505.9;" xml:space="preserve">
-                                <path class="buttonStroke--stroke" d="M776.4,10.1C590,7.7,403.3,37.3,226.9,97.2c-79.7,27.1-163.6,65.9-201.4,141.2c-10.7,21.4-17.2,45.4-15,69.2
+          <li class="button__svg">
+            <a href="./index.html">
+              <svg class="buttonStroke" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1311.1 505.9"
+                style="enable-background:new 0 0 1311.1 505.9;" xml:space="preserve">
+                <path class="buttonStroke--stroke" d="M776.4,10.1C590,7.7,403.3,37.3,226.9,97.2c-79.7,27.1-163.6,65.9-201.4,141.2c-10.7,21.4-17.2,45.4-15,69.2
                   c4,43.5,35.8,79.6,71.2,105.2c57.4,41.3,126.9,63,196.9,73.1c70,10.1,141,9.3,211.7,9.5c209.1,0.6,424.4,9.3,620.2-64
                   c49.2-18.4,97.4-42.5,134.3-79.8s61.3-89.7,55.4-141.8c-6.4-57-48.1-105.5-98.3-133.2c-50.2-27.7-108.3-37.3-165.5-42.5
                   c-140.3-12.7-283.1-0.7-418.6,37.8" />
-                            </svg>
-                            <span>Proyectos</span>
-                        </a>
-                    </li>
+              </svg>
+              <span>Proyectos</span>
+            </a>
+          </li>
 
-                    <li class="button__svg active">
-                        <a href="./about.html">
-                            <svg class="buttonStroke" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1311.1 505.9"
-                                style="enable-background:new 0 0 1311.1 505.9;" xml:space="preserve">
-                                <path class="buttonStroke--stroke" d="M776.4,10.1C590,7.7,403.3,37.3,226.9,97.2c-79.7,27.1-163.6,65.9-201.4,141.2c-10.7,21.4-17.2,45.4-15,69.2
+          <li class="button__svg active">
+            <a href="./about.html">
+              <svg class="buttonStroke" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1311.1 505.9"
+                style="enable-background:new 0 0 1311.1 505.9;" xml:space="preserve">
+                <path class="buttonStroke--stroke" d="M776.4,10.1C590,7.7,403.3,37.3,226.9,97.2c-79.7,27.1-163.6,65.9-201.4,141.2c-10.7,21.4-17.2,45.4-15,69.2
                   c4,43.5,35.8,79.6,71.2,105.2c57.4,41.3,126.9,63,196.9,73.1c70,10.1,141,9.3,211.7,9.5c209.1,0.6,424.4,9.3,620.2-64
                   c49.2-18.4,97.4-42.5,134.3-79.8s61.3-89.7,55.4-141.8c-6.4-57-48.1-105.5-98.3-133.2c-50.2-27.7-108.3-37.3-165.5-42.5
                   c-140.3-12.7-283.1-0.7-418.6,37.8" />
-                            </svg>
-                            <span>Sobre mí</span>
-                        </a>
-                    </li>
+              </svg>
+              <span>Sobre mí</span>
+            </a>
+          </li>
 
-                    <li class="button__svg">
-                        <a href="./contact.html">
-                            <svg class="buttonStroke" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1311.1 505.9"
-                                style="enable-background:new 0 0 1311.1 505.9;" xml:space="preserve">
-                                <path class="buttonStroke--stroke" d="M776.4,10.1C590,7.7,403.3,37.3,226.9,97.2c-79.7,27.1-163.6,65.9-201.4,141.2c-10.7,21.4-17.2,45.4-15,69.2
+          <li class="button__svg">
+            <a href="./contact.html">
+              <svg class="buttonStroke" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1311.1 505.9"
+                style="enable-background:new 0 0 1311.1 505.9;" xml:space="preserve">
+                <path class="buttonStroke--stroke" d="M776.4,10.1C590,7.7,403.3,37.3,226.9,97.2c-79.7,27.1-163.6,65.9-201.4,141.2c-10.7,21.4-17.2,45.4-15,69.2
                   c4,43.5,35.8,79.6,71.2,105.2c57.4,41.3,126.9,63,196.9,73.1c70,10.1,141,9.3,211.7,9.5c209.1,0.6,424.4,9.3,620.2-64
                   c49.2-18.4,97.4-42.5,134.3-79.8s61.3-89.7,55.4-141.8c-6.4-57-48.1-105.5-98.3-133.2c-50.2-27.7-108.3-37.3-165.5-42.5
                   c-140.3-12.7-283.1-0.7-418.6,37.8" />
-                            </svg>
-                            <span>Contáctame</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+              </svg>
+              <span>Contáctame</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
 
-            <div class="header__right">
-                <nav class="nav-buttons">
-                    <ul>
-                        <li class="button__svg button__svg--curriculum">
-                            <a href="./index.html">
-                                <svg class="buttonStroke" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                    viewBox="0 0 1311.1 505.9" style="enable-background:new 0 0 1311.1 505.9;"
-                                    xml:space="preserve">
-                                    <path class="buttonStroke--stroke" d="M776.4,10.1C590,7.7,403.3,37.3,226.9,97.2c-79.7,27.1-163.6,65.9-201.4,141.2c-10.7,21.4-17.2,45.4-15,69.2
+      <div class="header__right">
+        <nav class="nav-buttons">
+          <ul>
+            <li class="button__svg button__svg--curriculum">
+              <a href="./index.html">
+                <svg class="buttonStroke" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1311.1 505.9"
+                  style="enable-background:new 0 0 1311.1 505.9;" xml:space="preserve">
+                  <path class="buttonStroke--stroke" d="M776.4,10.1C590,7.7,403.3,37.3,226.9,97.2c-79.7,27.1-163.6,65.9-201.4,141.2c-10.7,21.4-17.2,45.4-15,69.2
                   c4,43.5,35.8,79.6,71.2,105.2c57.4,41.3,126.9,63,196.9,73.1c70,10.1,141,9.3,211.7,9.5c209.1,0.6,424.4,9.3,620.2-64
                   c49.2-18.4,97.4-42.5,134.3-79.8s61.3-89.7,55.4-141.8c-6.4-57-48.1-105.5-98.3-133.2c-50.2-27.7-108.3-37.3-165.5-42.5
                   c-140.3-12.7-283.1-0.7-418.6,37.8" />
-                                </svg>
-                                <span>Curriculum</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                </svg>
+                <span>Curriculum</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
 
-                <svg class="lightDark" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000"
-                    style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+        <svg class="lightDark" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000"
+          style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
 
-                    <path class="lightDark--stroke" d="M181.6,916.9C83,887.9,32.1,777.7,75.4,684.5c17.7-38,49-67.4,103.4-68.1c71.5-0.9,109-33.5,114.7-56.9
+          <path class="lightDark--stroke" d="M181.6,916.9C83,887.9,32.1,777.7,75.4,684.5c17.7-38,49-67.4,103.4-68.1c71.5-0.9,109-33.5,114.7-56.9
 	c5.8-23.8-41.9-41.9-94.5-59.7c-52.6-17.9-132.8-11.2-132.8,3.1s104.2,40.3,177.7,23C317.4,508.5,345,410,331.7,337.5
 	s-81.2-131.2-120.5-115.4s175.1,128.2,239.5,99.6c64.3-28.6,90.4-143,74.6-192c-15.8-49-40.9-36.8-34.2,30.6
 	c6.6,67.4,33.2,164.9,116.4,201.7s184.9-38.3,204.8-82.7c19.9-44.4-29.1-39.3-75.6,12.3s-68.4,134.8-41.4,204.8s138.9,71.5,194,44.4
@@ -116,11 +122,11 @@
 	c88.1-3.2,160.8,68.8,158.1,157c-1.5,48.5-5.7,106.4-15,171.4c-19.3,135.5-120.5,234.5-184.6,284.7c-31.3,24.6-70.4,37.3-110.2,35.9
 	C566.5,975,335.9,962.2,181.6,916.9z" />
 
-                </svg>
+        </svg>
 
-            </div>
-        </div>
-    </header>
+      </div>
+    </div>
+  </header>
   <main>
 
     <div class="container containerAbout">

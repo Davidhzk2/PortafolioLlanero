@@ -16,6 +16,10 @@
 @import 'about';
 @import 'contact';
 
+html{
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -105,7 +109,7 @@ p {
     }
 }
 
-#cursor path {
+#cursor path {  
     fill: none;
     stroke: $strokeColor;
     stroke-width: 11;
@@ -133,11 +137,6 @@ p {
 
 @view-transition {
     navigation: auto;
-}
-
-::view-transition-old(root),
-::view-transition-new(root) {
-    animation: none;
 }
 
 ::view-transition-old(root) {
